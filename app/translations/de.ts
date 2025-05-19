@@ -9,11 +9,11 @@ export const de = {
   
   // Home page
   home: {
-    welcome: 'Willkommen in der Welt des Wrestlings!',
+    welcome: 'Willkommen bei Wrestlingo!',
     subtitle: 'Teste dein Wissen in Quizzen und Spielen',
-    guessWrestlerDesc: 'Errate den Wrestler anhand allmählich aufgedeckter Hinweise. Je schneller du errätst, desto mehr Punkte erhältst du!',
+    guessWrestlerDesc: 'Errate den Wrestler anhand von nach und nach enthüllten Hinweisen. Je schneller du errätst, desto mehr Punkte erhältst du!',
     playNow: 'Jetzt Spielen',
-    moreGamesSoon: 'Weitere Spiele Bald',
+    moreGamesSoon: 'Mehr Spiele Bald',
     workingOnNewChallenges: 'Wir arbeiten an neuen Herausforderungen für Wrestling-Fans!',
     comingSoon: 'Demnächst...'
   },
@@ -31,11 +31,11 @@ export const de = {
     championships: 'Titel',
     finishers: 'Finisher',
     funFact: 'Fun Fact',
-    inputPlaceholder: 'Wrestlername eingeben...',
-    checkButton: 'Überprüfen',
+    inputPlaceholder: 'Wrestler-Name eingeben...',
+    checkButton: 'Prüfen',
     metricUnits: 'metrisch',
     imperialUnits: 'imperial',
-    changeUnits: 'Wechseln zu',
+    changeUnits: 'Ändern zu',
     active: 'aktiv',
     notActive: 'nicht aktiv',
     firstTry: 'Erster',
@@ -43,26 +43,29 @@ export const de = {
     thirdTry: 'Dritter',
     fourthTry: 'Vierter',
     fifthTry: 'Fünfter',
-    incorrectGuess: 'falscher Versuch',
+    incorrectGuess: 'falsch',
     congratulations: 'Glückwunsch! Du hast es erraten!',
-    pointsEarned: 'Punkte verdient',
-    gameOver: 'Spiel vorbei',
+    allHintsRevealed: 'Alle Informationen wurden enthüllt',
+    pointsEarned: 'Verdiente Punkte',
+    gameOver: 'Tut uns leid, du hast es nicht erraten',
     thatWas: 'Das war',
-    playAgain: 'Nochmal spielen',
-    backToGames: 'Zurück zu Spielen'
+    playAgain: 'Nochmal Spielen',
+    backToGames: 'Zurück zu Spielen',
+    buyHint: 'Hinweis kaufen'
   },
   
   // Footer
   footer: {
-    about: 'Über WrestlinGo',
+    about: 'Über uns',
     aboutText: 'Eine Plattform für Wrestling-Fans, auf der du dein Wissen testen und mit anderen in Wrestling-Quizzen konkurrieren kannst.',
     contact: 'Kontakt',
     legal: 'Rechtliches',
-    terms: 'Nutzungsbedingungen',
-    privacy: 'Datenschutzrichtlinie',
+    terms: 'Bedingungen',
+    privacy: 'Datenschutz',
     cookies: 'Cookie-Richtlinie',
-    copyright: 'Alle Rechte vorbehalten.',
+    copyright: '© 2023 WrestlinGo. Alle Rechte vorbehalten.',
     madeWith: 'Erstellt mit',
-    byWrestlingo: 'vom WrestlinGo-Team'
+    byWrestlingo: 'vom WrestlinGo-Team',
+    language: 'Sprache'
   }
 } 

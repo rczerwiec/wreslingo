@@ -45,11 +45,13 @@ export const pl = {
     fifthTry: 'Piąty',
     incorrectGuess: 'błędnie',
     congratulations: 'Gratulacje! Udało Ci się odgadnąć!',
+    allHintsRevealed: 'Wszystkie informacje zostały odkryte',
     pointsEarned: 'Zdobyte punkty',
     gameOver: 'Niestety, nie udało się odgadnąć',
     thatWas: 'To był',
     playAgain: 'Zagraj ponownie',
-    backToGames: 'Wróć do gier'
+    backToGames: 'Wróć do gier',
+    buyHint: 'Kup podpowiedź'
   },
   
   // Footer
@@ -63,6 +65,7 @@ export const pl = {
     cookies: 'Polityka cookies',
     copyright: 'Wszystkie prawa zastrzeżone.',
     madeWith: 'Stworzone z ',
-    byWrestlingo: 'przez zespół Wrestlingo'
+    byWrestlingo: 'przez zespół Wrestlingo',
+    language: 'Język'
   }
 } 

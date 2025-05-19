@@ -3,13 +3,13 @@ export const en = {
   nav: {
     games: 'Games',
     ranking: 'Ranking',
-    login: 'Sign In',
-    register: 'Sign Up'
+    login: 'Login',
+    register: 'Register'
   },
   
   // Home page
   home: {
-    welcome: 'Welcome to the world of wrestling!',
+    welcome: 'Welcome to Wrestlingo!',
     subtitle: 'Test your knowledge in quizzes and games',
     guessWrestlerDesc: 'Guess the wrestler based on gradually revealed hints. The faster you guess, the more points you earn!',
     playNow: 'Play Now',
@@ -20,7 +20,7 @@ export const en = {
   
   // Guess Wrestler Game
   guessWrestler: {
-    title: 'Guess The Wrestler',
+    title: 'Guess the Wrestler',
     score: 'Score',
     physicalStats: 'Height and Weight',
     workplace: 'Workplace',
@@ -35,7 +35,7 @@ export const en = {
     checkButton: 'Check',
     metricUnits: 'metric',
     imperialUnits: 'imperial',
-    changeUnits: 'Switch to',
+    changeUnits: 'Change to',
     active: 'active',
     notActive: 'not active',
     firstTry: 'First',
@@ -43,26 +43,24 @@ export const en = {
     thirdTry: 'Third',
     fourthTry: 'Fourth',
     fifthTry: 'Fifth',
-    incorrectGuess: 'incorrect guess',
+    incorrectGuess: 'incorrect',
     congratulations: 'Congratulations! You guessed it!',
+    allHintsRevealed: 'All information has been revealed',
     pointsEarned: 'Points earned',
-    gameOver: 'Game Over',
+    gameOver: 'Sorry, you didn\'t guess it',
     thatWas: 'That was',
-    playAgain: 'Play again',
-    backToGames: 'Back to games'
+    playAgain: 'Play Again',
+    backToGames: 'Back to Games',
+    buyHint: 'Buy hint'
   },
   
   // Footer
   footer: {
-    about: 'About WrestlinGo',
-    aboutText: 'A platform for wrestling fans where you can test your knowledge and compete with others in wrestling-themed quizzes.',
+    about: 'About',
     contact: 'Contact',
-    legal: 'Legal',
-    terms: 'Terms of Service',
-    privacy: 'Privacy Policy',
-    cookies: 'Cookie Policy',
-    copyright: 'All rights reserved.',
-    madeWith: 'Made with',
-    byWrestlingo: 'by WrestlinGo team'
+    terms: 'Terms',
+    privacy: 'Privacy',
+    copyright: '© 2023 WrestlinGo. All rights reserved.',
+    language: 'Language'
   }
 } 

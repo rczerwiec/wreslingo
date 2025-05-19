@@ -68,13 +68,13 @@ export default function GuessWrestler() {
     status: {
       label: t.guessWrestler.status,
       icon: <FaInfoCircle />,
-      points: 15,
+      points: 5,
       priority: 3
     },
     origin: {
       label: t.guessWrestler.origin,
       icon: <FaGlobeAmericas />,
-      points: 15,
+      points: 5,
       priority: 4
     },
     characteristic: {
@@ -104,19 +104,19 @@ export default function GuessWrestler() {
     funFact1: {
       label: `${t.guessWrestler.funFact} 1`,
       icon: <FaLightbulb />,
-      points: 15,
+      points: 30,
       priority: 9
     },
     funFact2: {
       label: `${t.guessWrestler.funFact} 2`,
       icon: <FaThumbsUp />,
-      points: 20,
+      points: 30,
       priority: 10
     },
     funFact3: {
       label: `${t.guessWrestler.funFact} 3`,
       icon: <FaMedal />,
-      points: 25,
+      points: 30,
       priority: 11
     }
   }
@@ -127,8 +127,9 @@ export default function GuessWrestler() {
       const newWrestler = getRandomWrestler()
       setWrestler(newWrestler)
 
-      // Losujemy pierwszą podpowiedź
-      const availableHints = Object.keys(HINTS_CONFIG) as HintType[]
+      // Losujemy pierwszą podpowiedź (niebędącą ciekawostką)
+      const availableHints = Object.keys(HINTS_CONFIG)
+        .filter(type => !type.startsWith('funFact')) as HintType[]
       const randomIndex = Math.floor(Math.random() * availableHints.length)
       const firstHint = availableHints[randomIndex]
       
@@ -261,6 +262,9 @@ export default function GuessWrestler() {
     const currentAttempt = guessHistory.length + 1
     
     if (checkWrestlerGuess(wrestler, guess)) {
+      // Po poprawnym odgadnięciu odkrywamy wszystkie podpowiedzi
+      const allHints = Object.keys(HINTS_CONFIG) as HintType[]
+      setRevealedHints(allHints)
       setGameStatus('won')
     } else {
       setGuessHistory(prev => [...prev, {
@@ -473,6 +477,7 @@ export default function GuessWrestler() {
                 .map(([type, config]) => {
                   const isRevealed = revealedHints.includes(type as HintType)
                   const isRevealing = isHintRevealing === type
+                  const canBuy = score >= config.points && !isRevealed && gameStatus === 'playing'
                   
                   return (
                     <motion.div
@@ -480,11 +485,12 @@ export default function GuessWrestler() {
                       className={`relative overflow-hidden rounded-xl transition-all duration-500 ${
                         isRevealed 
                           ? 'bg-white/10 backdrop-blur-sm' 
-                          : 'bg-blue-900/50'
+                          : canBuy ? 'bg-blue-900/50 cursor-pointer hover:bg-blue-800/50' : 'bg-blue-900/50 opacity-70'
                       }`}
                       variants={hintVariants}
                       animate={isRevealed ? "revealed" : "visible"}
-                      whileHover={{ scale: 1.02 }}
+                      whileHover={{ scale: canBuy ? 1.02 : 1 }}
+                      onClick={() => canBuy && revealHint(type as HintType)}
                     >
                       <div className="p-4">
                         <div className="flex items-center justify-between mb-2">
@@ -495,12 +501,12 @@ export default function GuessWrestler() {
                             {config.icon}
                           </motion.span>
                           {!isRevealed && (
-                            <span className="text-blue-300 text-sm">-{config.points} pkt</span>
+                            <span className={`text-sm ${canBuy ? 'text-blue-300' : 'text-gray-400'}`}>-{config.points} pkt</span>
                           )}
                         </div>
                         
                         <div className="space-y-1">
-                          <h3 className="text-blue-200 font-medium">
+                          <h3 className={`font-medium ${canBuy ? 'text-blue-200' : 'text-gray-400'}`}>
                             {config.label}
                           </h3>
                           <AnimatePresence>
@@ -513,6 +519,16 @@ export default function GuessWrestler() {
                               >
                                 {formatHintValue(type as HintType, wrestler)}
                               </motion.div>
+                            )}
+                            {!isRevealed && canBuy && (
+                              <motion.button
+                                className="text-xs text-emerald-400 mt-2 flex items-center gap-1 hover:text-emerald-300 transition-colors"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                whileTap={{ scale: 0.95 }}
+                              >
+                                <FaLightbulb className="text-xs" /> {t.guessWrestler.buyHint}
+                              </motion.button>
                             )}
                           </AnimatePresence>
                         </div>
@@ -634,6 +650,14 @@ export default function GuessWrestler() {
                         transition={{ delay: 0.7 }}
                       >
                         {t.guessWrestler.thatWas} {wrestler?.name}!
+                      </motion.p>
+                      <motion.p 
+                        className="text-sm text-green-300"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.9 }}
+                      >
+                        {t.guessWrestler.allHintsRevealed}
                       </motion.p>
                     </div>
                   ) : (
