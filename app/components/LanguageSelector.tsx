@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 type FlagConfig = {
   [key in LanguageCode]: {
     name: string;
-    icon: string;
+    flag: string;
   }
 }
 
@@ -20,19 +20,19 @@ export const LanguageSelector: React.FC = () => {
   const FLAGS: FlagConfig = {
     pl: {
       name: 'Polski',
-      icon: '🇵🇱'
+      flag: '🇵🇱'
     },
     en: {
       name: 'English',
-      icon: '🇬🇧'
+      flag: '🇬🇧'
     },
     de: {
       name: 'Deutsch',
-      icon: '🇩🇪'
+      flag: '🇩🇪'
     },
     es: {
       name: 'Español',
-      icon: '🇪🇸'
+      flag: '🇪🇸'
     }
   }
   
@@ -72,12 +72,12 @@ export const LanguageSelector: React.FC = () => {
           <FaGlobeAmericas className="text-blue-300" />
         </motion.div>
         <motion.span 
-          className="mx-2"
+          className="mx-2 text-xl"
           initial={{ scale: 1 }}
           whileHover={{ scale: 1.2 }}
           transition={{ duration: 0.2 }}
         >
-          {FLAGS[currentLanguage].icon}
+          {FLAGS[currentLanguage].flag}
         </motion.span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
@@ -110,7 +110,7 @@ export const LanguageSelector: React.FC = () => {
               initial="hidden"
               animate="visible"
             >
-              {Object.entries(FLAGS).map(([code, { name, icon }], index) => (
+              {Object.entries(FLAGS).map(([code, { name, flag }], index) => (
                 <motion.button
                   key={code}
                   onClick={() => handleLanguageChange(code as LanguageCode)}
@@ -130,10 +130,10 @@ export const LanguageSelector: React.FC = () => {
                   whileTap={{ scale: 0.98 }}
                 >
                   <motion.span 
-                    className="text-xl"
+                    className="text-2xl"
                     whileHover={{ scale: 1.2 }}
                   >
-                    {icon}
+                    {flag}
                   </motion.span>
                   <span>{name}</span>
                   {currentLanguage === code && (

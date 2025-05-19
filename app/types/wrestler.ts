@@ -34,6 +34,7 @@ export type Wrestler = {
   birthplace: LocalizedContent
   characteristic: LocalizedContent
   funFacts: LocalizedContent[]
+  birthDate: string  // Format: YYYY-MM-DD
 }
 
 export type WrestlerHint = {

@@ -18,6 +18,15 @@ export const pl = {
     comingSoon: 'Już wkrótce...'
   },
   
+  // Kafelka wieku wrestlera
+  wrestlerAge: {
+    title: 'Wiek Wrestlera',
+    birthDate: 'Data urodzenia',
+    age: 'Wiek',
+    randomize: 'Losuj innego wrestlera',
+    ageHint: 'Ten wrestler ma {age} lat'
+  },
+  
   // Gra Zgadnij Wrestlera
   guessWrestler: {
     title: 'Zgadnij Wrestlera',
@@ -27,7 +36,8 @@ export const pl = {
     status: 'Status',
     origin: 'Pochodzenie',
     characteristic: 'Cecha charakterystyczna',
-    yearsActive: 'Kariera',
+    yearsActive: 'Debiut',
+    debutYear: 'Rok debiutu',
     championships: 'Tytuły',
     finishers: 'Finishery',
     funFact: 'Ciekawostka',
@@ -51,7 +61,8 @@ export const pl = {
     thatWas: 'To był',
     playAgain: 'Zagraj ponownie',
     backToGames: 'Wróć do gier',
-    buyHint: 'Kup podpowiedź'
+    buyHint: 'Kup podpowiedź',
+    notEnoughPoints: 'Niewystarczająca liczba punktów!'
   },
   
   // Footer

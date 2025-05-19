@@ -5,7 +5,7 @@ export const wrestlers: Wrestler[] = [
   {
     id: 'roman-reigns',
     name: 'Roman Reigns',
-    alternateNames: ['Leakee', 'Roman Leakee'],
+    alternateNames: ['Leakee', 'Roman Leakee', "The Big Dog", "The Tribal Chief"],
     currentEmployer: 'WWE',
     currentRoster: 'SmackDown',
     yearsActive: {
@@ -13,21 +13,47 @@ export const wrestlers: Wrestler[] = [
     },
     championships: [
       {
-        name: 'WWE Universal Championship',
-        times: 1,
-        yearFirst: 2020
-      },
-      {
         name: 'WWE Championship',
         times: 4,
         yearFirst: 2015,
         yearLast: 2023
+      },
+      {
+        name: 'WWE Universal Championship',
+        times: 2,
+        yearFirst: 2020,
+        yearLast: 2024
+      },
+      {
+        name: 'WWE Royal Rumble',
+        times: 1,
+        yearFirst: 2020,
+        yearLast: 2024
+      },
+      {
+        name: 'WWE Intercontinental Championship',
+        times: 1,
+        yearFirst: 2017,
+        yearLast: 2017
+      },
+      {
+        name: 'WWE United States Championship',
+        times: 1,
+        yearFirst: 2016,
+        yearLast: 2017
+      },
+      {
+        name: 'WWE Tag Team Championships',
+        times: 1,
+        yearFirst: 2013,
+        yearLast: 2013
       }
     ],
     finishers: ['Spear', 'Superman Punch'],
     signature_moves: ['Drive By', 'Moment of Silence'],
     height: '6\'3"',
     weight: '265 lbs',
+    birthDate: '1985-05-25',
     birthplace: {
       pl: 'Pensacola, Floryda',
       en: 'Pensacola, Florida',
@@ -78,16 +104,29 @@ export const wrestlers: Wrestler[] = [
         yearLast: 2021
       },
       {
-        name: 'IWGP Heavyweight Championship',
+        name: 'AEW International Championship',
         times: 1,
-        yearFirst: 2018,
-        yearLast: 2019
+        yearFirst: 2025,
+        yearLast: 2025
+      },
+      {
+        name: 'AEW World Trios Championship',
+        times: 2,
+        yearFirst: 2023,
+        yearLast: 2023
+      },
+      {
+        name: "AEW World Tag Team Championships",
+        times: 1,
+        yearFirst: 2023,
+        yearLast: 2023
       }
     ],
     finishers: ['One-Winged Angel', 'V-Trigger'],
     signature_moves: ['You Can\'t Escape', 'Dr. Wily\'s Bomb'],
     height: '6\'0"',
     weight: '227 lbs',
+    birthDate: '1983-10-16',
     birthplace: {
       pl: 'Winnipeg, Manitoba, Kanada',
       en: 'Winnipeg, Manitoba, Canada',
@@ -124,9 +163,9 @@ export const wrestlers: Wrestler[] = [
   {
     id: 'the-miz',
     name: 'The Miz',
-    alternateNames: ['Mike Mizanin', 'Michael Mizanin'],
+    alternateNames: ['Mike Mizanin', 'Michael Mizanin', "Miz", "Mike The Miz"],
     currentEmployer: 'WWE',
-    currentRoster: 'RAW',
+    currentRoster: 'Smackdown',
     yearsActive: {
       from: 2003
     },
@@ -138,16 +177,41 @@ export const wrestlers: Wrestler[] = [
         yearLast: 2021
       },
       {
-        name: 'Intercontinental Championship',
+        name: 'WWE Money in the Bank',
+        times: 2,
+        yearFirst: 2016,
+        yearLast: 2017
+      },
+      {
+        name: 'WWE Intercontinental Championship',
         times: 8,
         yearFirst: 2012,
         yearLast: 2018
-      }
+      },
+      {
+        name: 'WWE United States Championship',
+        times: 2,
+        yearFirst: 2016,
+        yearLast: 2017
+      },
+      {
+        name: 'WWE Tag Team Championships',
+        times: 2,
+        yearFirst: 2013,
+        yearLast: 2013
+      },
+      {
+        name: 'WWE World Tag Team Championships',
+        times: 5,
+        yearFirst: 2013,
+        yearLast: 2013
+      },
     ],
     finishers: ['Skull Crushing Finale', 'Figure-Four Leglock'],
     signature_moves: ['Reality Check', 'Yes Kicks'],
     height: '6\'2"',
     weight: '221 lbs',
+    birthDate: '1980-10-08',
     birthplace: {
       pl: 'Parma, Ohio',
       en: 'Parma, Ohio',
@@ -162,10 +226,10 @@ export const wrestlers: Wrestler[] = [
     },
     funFacts: [
       {
-        pl: 'Rozpoczął karierę występując w reality show MTV "The Real World" w 2001 roku',
-        en: 'He started his career by appearing on MTV\'s reality show "The Real World" in 2001',
-        de: 'Er begann seine Karriere mit einem Auftritt in MTVs Reality-Show "The Real World" im Jahr 2001',
-        es: 'Comenzó su carrera apareciendo en el reality show de MTV "The Real World" en 2001'
+        pl: 'Rozpoczął karierę występując w reality show MTV ',
+        en: 'He started his career by appearing on MTV\'s reality show',
+        de: 'Er begann seine Karriere mit einem Auftritt in MTVs Reality-Show',
+        es: 'Comenzó su carrera apareciendo en el reality show de MTV'
       },
       {
         pl: 'Zagrał główną rolę w serii filmów akcji "The Marine" (części 3, 4, 5 i 6)',
@@ -174,17 +238,17 @@ export const wrestlers: Wrestler[] = [
         es: 'Protagonizó la serie de películas de acción "The Marine" (partes 3, 4, 5 y 6)'
       },
       {
-        pl: 'Ma własne reality show z żoną Maryse o nazwie "Miz & Mrs"',
-        en: 'He has his own reality show with his wife Maryse called "Miz & Mrs"',
-        de: 'Er hat seine eigene Reality-Show mit seiner Frau Maryse namens "Miz & Mrs"',
-        es: 'Tiene su propio reality show con su esposa Maryse llamado "Miz & Mrs"'
+        pl: 'Ma własne reality show z żoną',
+        en: 'He has his own reality show with his wife',
+        de: 'Er hat seine eigene Reality-Show mit seiner Frau"',
+        es: 'Tiene su propio reality show con su esposa '
       }
     ]
   },
   {
     id: 'john-cena',
     name: 'John Cena',
-    alternateNames: ['The Prototype', 'Doctor of Thuganomics'],
+    alternateNames: ['The Prototype', 'Doctor of Thuganomics',],
     currentEmployer: 'WWE',
     currentRoster: 'Part-time',
     yearsActive: {
@@ -193,27 +257,52 @@ export const wrestlers: Wrestler[] = [
     championships: [
       {
         name: 'WWE Championship',
-        times: 13,
+        times: 14,
         yearFirst: 2005,
-        yearLast: 2017
+        yearLast: 2025
       },
       {
-        name: 'World Heavyweight Championship',
+        name: 'WWE World Heavyweight Championship',
         times: 3,
         yearFirst: 2009,
         yearLast: 2013
       },
       {
-        name: 'United States Championship',
+        name: 'WWE Royal Rumble',
+        times: 2,
+        yearFirst: 2016,
+        yearLast: 2017
+      },
+      {
+        name: 'WWE Money in the Bank',
+        times: 1,
+        yearFirst: 2016,
+        yearLast: 2017
+      },
+      {
+        name: 'WWE United States Championship',
         times: 5,
         yearFirst: 2004,
         yearLast: 2015
+      },
+      {
+        name: 'WWE Tag Team Championships',
+        times: 2,
+        yearFirst: 2013,
+        yearLast: 2013
+      },
+      {
+        name: 'WWE World Tag Team Championships',
+        times: 2,
+        yearFirst: 2013,
+        yearLast: 2013
       }
     ],
     finishers: ['Attitude Adjustment', 'STF'],
     signature_moves: ['Five Knuckle Shuffle', 'Shoulder Tackles'],
     height: '6\'1"',
     weight: '251 lbs',
+    birthDate: '1977-04-23',
     birthplace: {
       pl: 'West Newbury, Massachusetts',
       en: 'West Newbury, Massachusetts',
@@ -221,10 +310,10 @@ export const wrestlers: Wrestler[] = [
       es: 'West Newbury, Massachusetts'
     },
     characteristic: {
-      pl: 'Krótkie włosy, kolorowe koszulki i czapki, gest "You Can\'t See Me"',
-      en: 'Short hair, colorful shirts and caps, "You Can\'t See Me" gesture',
-      de: 'Kurze Haare, bunte T-Shirts und Kappen, "You Can\'t See Me"-Geste',
-      es: 'Pelo corto, camisetas y gorras coloridas, gesto "You Can\'t See Me"'
+      pl: 'Krótkie włosy, kolorowe koszulki i czapki',
+      en: 'Short hair, colorful shirts and caps',
+      de: 'Kurze Haare, bunte T-Shirts und Kappen',
+      es: 'Pelo corto, camisetas y gorras coloridas'
     },
     funFacts: [
       {
@@ -240,19 +329,19 @@ export const wrestlers: Wrestler[] = [
         es: 'Es un actor con una carrera en crecimiento en Hollywood, apareciendo en películas como "Fast & Furious" y "Suicide Squad"'
       },
       {
-        pl: 'Nagrał album hip-hopowy "You Can\'t See Me", który dotarł do 15. miejsca na liście Billboard 200',
-        en: 'He recorded a hip-hop album "You Can\'t See Me" that reached #15 on the Billboard 200 chart',
-        de: 'Er nahm ein Hip-Hop-Album "You Can\'t See Me" auf, das Platz 15 der Billboard 200-Charts erreichte',
-        es: 'Grabó un álbum de hip-hop "You Can\'t See Me" que alcanzó el puesto 15 en la lista Billboard 200'
+        pl: 'Nagrał album hip-hopowy, który dotarł do 15. miejsca na liście Billboard 200',
+        en: 'He recorded a hip-hop album that reached #15 on the Billboard 200 chart',
+        de: 'Er nahm ein Hip-Hop-Album auf, das Platz 15 der Billboard 200-Charts erreichte',
+        es: 'Grabó un álbum de hip-hop que alcanzó el puesto 15 en la lista Billboard 200'
       }
     ]
   },
   {
     id: 'kofi-kingston',
     name: 'Kofi Kingston',
-    alternateNames: ['Kofi Nahaje Sarkodie-Mensah'],
+    alternateNames: ['Kofi Nahaje Sarkodie-Mensah', "Kofi"],
     currentEmployer: 'WWE',
-    currentRoster: 'SmackDown',
+    currentRoster: 'RAW',
     yearsActive: {
       from: 2006
     },
@@ -264,22 +353,35 @@ export const wrestlers: Wrestler[] = [
         yearLast: 2019
       },
       {
-        name: 'Intercontinental Championship',
+        name: 'WWE Intercontinental Championship',
         times: 4,
         yearFirst: 2008,
         yearLast: 2012
       },
       {
-        name: 'Tag Team Championships',
-        times: 14,
+        name: 'WWE United States Championship',
+        times: 3,
         yearFirst: 2008,
         yearLast: 2023
+      },
+      {
+        name: 'WWE World Tag Team Championships',
+        times: 7,
+        yearFirst: 2013,
+        yearLast: 2013
+      },
+      {
+        name: 'WWE Tag Team Championships',
+        times: 7,
+        yearFirst: 2013,
+        yearLast: 2013
       }
     ],
     finishers: ['Trouble in Paradise', 'S.O.S.'],
-    signature_moves: ['Boom Drop', 'Double Foot Stomp'],
+    signature_moves: ['Boom Drop', 'Double Foot Stomp', "Kofi"],
     height: '6\'0"',
     weight: '212 lbs',
+    birthDate: '1981-08-14',
     birthplace: {
       pl: 'Kumasi, Ghana',
       en: 'Kumasi, Ghana',
@@ -316,7 +418,7 @@ export const wrestlers: Wrestler[] = [
   {
     id: 'aj-styles',
     name: 'AJ Styles',
-    alternateNames: ['Allen Neal Jones', 'The Phenomenal One'],
+    alternateNames: ['Allen Neal Jones', 'The Phenomenal One', 'AJStyles', 'AJ',],
     currentEmployer: 'WWE',
     currentRoster: 'RAW',
     yearsActive: {
@@ -331,21 +433,47 @@ export const wrestlers: Wrestler[] = [
       },
       {
         name: 'TNA World Heavyweight Championship',
-        times: 3,
+        times: 2,
         yearFirst: 2009,
         yearLast: 2013
       },
       {
-        name: 'IWGP Heavyweight Championship',
-        times: 2,
+        name: 'WWE Intercontinental Championship',
+        times: 1,
+        yearFirst: 2016,
+        yearLast: 2016
+      },
+      {
+        name: 'WWE United States Championship',
+        times: 3,
+        yearFirst: 2016,
+        yearLast: 2016
+      },
+      {
+        name: 'WWE Raw Tag Team Championships',
+        times: 1,
+        yearFirst: 2013,
+        yearLast: 2013
+      },
+
+      {
+        name: 'TNA X Division Championship',
+        times: 6,
         yearFirst: 2014,
         yearLast: 2015
+      },
+      {
+        name: 'TNA World Tag Team Championships',
+        times: 2,
+        yearFirst: 2013,
+        yearLast: 2013
       }
     ],
     finishers: ['Styles Clash', 'Phenomenal Forearm', 'Calf Crusher'],
     signature_moves: ['Pele Kick', 'Ushigoroshi', 'Rack Bomb'],
     height: '5\'11"',
     weight: '218 lbs',
+    birthDate: '1977-06-02',
     birthplace: {
       pl: 'Gainesville, Georgia',
       en: 'Gainesville, Georgia',
@@ -378,7 +506,798 @@ export const wrestlers: Wrestler[] = [
         es: 'Es muy religioso y a menudo usa atuendos con "P1" (Phenomenal One) y "AJ" escritos en ellos'
       }
     ]
+  },
+  {
+    id: 'brock-lesnar',
+    name: 'Brock Lesnar',
+    alternateNames: ['The Beast Incarnate', 'The Next Big Thing'],
+    currentEmployer: 'WWE',
+    currentRoster: 'RAW',
+    yearsActive: {
+      from: 2000
+    },
+    championships: [
+      {
+        name: 'WWE Championship',
+        times: 7,
+        yearFirst: 2002,
+        yearLast: 2019
+      },
+      {
+        name: 'WWE Universal Championship',
+        times: 3,
+        yearFirst: 2017,
+        yearLast: 2022
+      },
+      {
+        name: 'WWE Royal Rumble',
+        times: 2,
+        yearFirst: 2013,
+        yearLast: 2013
+      },
+      {
+        name: 'WWE Money in the Bank',
+        times: 1,
+        yearFirst: 2008,
+        yearLast: 2010
+      },
+      {
+        name: 'WWE King of the Ring',
+        times: 1,
+        yearFirst: 2013,
+        yearLast: 2013
+      },
+      {
+        name: 'UFC Heavyweight Championship',
+        times: 1,
+        yearFirst: 2013,
+        yearLast: 2013
+      }
+
+    ],
+    finishers: ['F-5', 'Kimura Lock', 'German Suplex'],
+    signature_moves: ['Suplex City', 'Fallaway Slam', 'Corner Shoulder Blocks'],
+    height: '6\'3"',
+    weight: '286 lbs',
+    birthDate: '1977-07-12',
+    birthplace: {
+      pl: 'Webster, Dakota Południowa',
+      en: 'Webster, South Dakota',
+      de: 'Webster, South Dakota',
+      es: 'Webster, Dakota del Sur'
+    },
+    characteristic: {
+      pl: 'Muskularny, blond włosy w stylu crew cut, duży tatuaż miecza na klatce piersiowej',
+      en: 'Muscular build, blonde crew cut hair, large sword tattoo on chest',
+      de: 'Muskulöser Körperbau, blonder Bürstenschnitt, großes Schwert-Tattoo auf der Brust',
+      es: 'Complexión musculosa, pelo rubio corto, gran tatuaje de espada en el pecho'
+    },
+    funFacts: [
+      {
+        pl: 'Przed karierą w WWE był mistrzem NCAA w zapasach i zawodnikiem NFL (Minnesota Vikings)',
+        en: 'Before WWE, he was an NCAA wrestling champion and NFL player (Minnesota Vikings)',
+        de: 'Vor der WWE war er NCAA-Wrestling-Champion und NFL-Spieler (Minnesota Vikings)',
+        es: 'Antes de la WWE, fue campeón de lucha libre de la NCAA y jugador de la NFL (Minnesota Vikings)'
+      },
+      {
+        pl: 'Przeszedł do MMA i został mistrzem wagi ciężkiej UFC, pokonując Randy\'ego Couture\'a',
+        en: 'Transitioned to MMA and became UFC Heavyweight Champion by defeating Randy Couture',
+        de: 'Wechselte zum MMA und wurde UFC Schwergewichts-Champion durch einen Sieg gegen Randy Couture',
+        es: 'Pasó a MMA y se convirtió en Campeón de Peso Pesado de UFC al derrotar a Randy Couture'
+      },
+      {
+        pl: 'Przerwał legendarną serię 21-0 The Undertakera na WrestleManii 30',
+        en: 'Ended The Undertaker\'s legendary 21-0 WrestleMania streak at WrestleMania 30',
+        de: 'Beendete The Undertakers legendäre 21:0-WrestleMania-Serie bei WrestleMania 30',
+        es: 'Terminó la legendaria racha de 21-0 de The Undertaker en WrestleMania 30'
+      }
+    ]
+  },
+  {
+    id: 'rey-mysterio',
+    name: 'Rey Mysterio',
+    alternateNames: ['Oscar Gutierrez', 'Rey Mysterio Jr.', 'The Master of the 619'],
+    currentEmployer: 'WWE',
+    currentRoster: 'RAW',
+    yearsActive: {
+      from: 1989
+    },
+    championships: [
+      {
+        name: 'WWE Championship',
+        times: 1,
+        yearFirst: 2011,
+        yearLast: 2011
+      },
+      {
+        name: 'World Heavyweight Championship',
+        times: 2,
+        yearFirst: 2006,
+        yearLast: 2010
+      },
+      {
+        name: 'WWE Royal Rumble',
+        times: 1,
+        yearFirst: 2002,
+        yearLast: 2007
+      },
+      {
+        name: 'WWE Intercontinental Championship',
+        times: 2,
+        yearFirst: 2002,
+        yearLast: 2007
+      },
+      {
+        name: 'WWE United States Championship',
+        times: 3,
+        yearFirst: 2019,
+        yearLast: 2021
+      },
+      {
+        name: 'WWE Tag Team Championship',
+        times: 4,
+        yearFirst: 2002,
+        yearLast: 2019
+      },
+      {
+        name: 'WWE Smackdown Tag Team Championship',
+        times: 1,
+        yearFirst: 2019,
+        yearLast: 2021
+      },
+      {
+        name: 'WWE Cruiserweight Championship',
+        times: 3,
+        yearFirst: 2019,
+        yearLast: 2021
+      }
+    ],
+    finishers: ['619', 'West Coast Pop', 'Frog Splash'],
+    signature_moves: ['Hurricanrana', 'Dropkick', 'Satellite DDT'],
+    height: '5\'6"',
+    weight: '175 lbs',
+    birthDate: '1974-12-11',
+    birthplace: {
+      pl: 'San Diego, Kalifornia',
+      en: 'San Diego, California',
+      de: 'San Diego, Kalifornien',
+      es: 'San Diego, California'
+    },
+    characteristic: {
+      pl: 'Niewysoki wrestler w masce, charakterystyczne stroje inspirowane popkulturą, technika lucha libre',
+      en: 'Short masked wrestler, signature pop culture-inspired attires, lucha libre style',
+      de: 'Kleiner maskierter Wrestler, charakteristische von der Popkultur inspirierte Kostüme, Lucha-Libre-Stil',
+      es: 'Luchador enmascarado de baja estatura, atuendos característicos inspirados en la cultura pop, estilo lucha libre'
+    },
+    funFacts: [
+      {
+        pl: 'Jest uznawany za jednego z największych luchadores w historii wrestlingu',
+        en: 'He is considered one of the greatest luchadores in wrestling history',
+        de: 'Er gilt als einer der größten Luchadores in der Geschichte des Wrestlings',
+        es: 'Es considerado uno de los más grandes luchadores en la historia de la lucha libre profesional'
+      },
+      {
+        pl: 'Należy do grona Hall of Famer',
+        en: 'He is a member of the Hall of Fame',
+        de: 'Er ist Mitglied des Hall of Fame',
+        es: 'Es miembro del Salón de la Fama'
+      },
+      {
+        pl: 'Jego syn również jest wrestlerem w WWE',
+        en: 'His son is also a wrestler in WWE',
+        de: 'Sein Sohn ist ebenfalls Wrestler in der WWE',
+        es: 'Su hijo también es luchador en WWE'
+      }
+    ]
+  },
+  {
+    id: 'edge',
+    name: 'Edge',
+    alternateNames: ['Adam Copeland', 'The Rated-R Superstar', 'The Ultimate Opportunist'],
+    currentEmployer: 'AEW',
+    currentRoster: 'Dynamite',
+    yearsActive: {
+      from: 1992
+    },
+    championships: [
+      {
+        name: 'WWE Championship',
+        times: 4,
+        yearFirst: 2006,
+        yearLast: 2010
+      },
+      {
+        name: 'WWE World Heavyweight Championship',
+        times: 7,
+        yearFirst: 2007,
+        yearLast: 2011
+      },
+      {
+        name: 'WWE Intercontinental Championship',
+        times: 5,
+        yearFirst: 1999,
+        yearLast: 2004
+      },
+      {
+        name: 'WWE United States Championship',
+        times: 1,
+        yearFirst: 2001,
+        yearLast: 2001
+      },
+      {
+        name: 'WWE World Tag Team Championship',
+        times: 12,
+        yearFirst: 2000,
+        yearLast: 2009
+      },
+      {
+        name: 'WWE Tag Team Championship',
+        times: 2,
+        yearFirst: 2000,
+        yearLast: 2009
+      },
+      {
+        name: 'WWE King of the Ring',
+        times: 1,
+        yearFirst: 2001,
+        yearLast: 2001
+      },
+      {
+        name: 'WWE Royal Rumble',
+        times: 2,
+        yearFirst: 2010,
+        yearLast: 2010
+      },
+      {
+        name: 'WWE Money in the Bank',
+        times: 1,
+        yearFirst: 2005,
+        yearLast: 2005
+      }
+    ],
+    finishers: ['Spear', 'Edge-O-Matic', 'Killswitch'],
+    signature_moves: ['Edge-O-Cution', 'Edge-ucator', 'Downward Spiral'],
+    height: '6\'5"',
+    weight: '241 lbs',
+    birthDate: '1973-10-30',
+    birthplace: {
+      pl: 'Orangeville, Ontario, Kanada',
+      en: 'Orangeville, Ontario, Canada',
+      de: 'Orangeville, Ontario, Kanada',
+      es: 'Orangeville, Ontario, Canadá'
+    },
+    characteristic: {
+      pl: 'Długie blond włosy, czarny płaszcz, intensywne spojrzenie, liczne tatuaże',
+      en: 'Long blonde hair, black coat, intense stare, numerous tattoos',
+      de: 'Lange blonde Haare, schwarzer Mantel, intensiver Blick, zahlreiche Tattoos',
+      es: 'Cabello largo rubio, abrigo negro, mirada intensa, numerosos tatuajes'
+    },
+    funFacts: [
+      {
+        pl: 'Musiał przerwać karierę w 2011 roku z powodu kontuzji szyi, ale powrócił do ringu po 9 latach na Royal Rumble 2020',
+        en: 'Had to retire in 2011 due to neck injury but returned to the ring after 9 years at Royal Rumble 2020',
+        de: 'Musste 2011 wegen einer Nackenverletzung seine Karriere beenden, kehrte aber nach 9 Jahren beim Royal Rumble 2020 in den Ring zurück',
+        es: 'Tuvo que retirarse en 2011 debido a una lesión en el cuello, pero regresó al ring después de 9 años en Royal Rumble 2020'
+      },
+      {
+        pl: 'Był częścią legendarnego tag teamu wraz ze swoim najlepszym przyjacielem z dzieciństwa',
+        en: 'Was part of a legendary tag team with his real-life childhood best friend',
+        de: 'War Teil eines legendären Tag Teams mit seinem besten Freund aus Kindheitstagen',
+        es: 'Formó parte de un legendario equipo en parejas su mejor amigo de la infancia en la vida real'
+      },
+      {
+        pl: 'Po zakończeniu kariery w WWE przeszedł do AEW w 2023 roku',
+        en: 'After ending his WWE career, moved to AEW in 2023 ',
+        de: 'Nach dem Ende seiner WWE-Karriere wechselte er 2023 zu AEW',
+        es: 'Después de terminar su carrera en WWE, se mudó a AEW en 2023'
+      }
+    ]
+  },
+  {
+    id: 'seth-rollins',
+    name: 'Seth Rollins',
+    alternateNames: ['Tyler Black', 'The Architect', 'The Visionary', 'The Revolutionary'],
+    currentEmployer: 'WWE',
+    currentRoster: 'Raw',
+    yearsActive: {
+      from: 2005
+    },
+    championships: [
+      {
+        name: 'WWE Championship',
+        times: 2,
+        yearFirst: 2015,
+        yearLast: 2019
+      },
+      {
+        name: 'WWE Universal Championship',
+        times: 2,
+        yearFirst: 2019,
+        yearLast: 2019
+      },
+      {
+        name: 'WWE World Heavyweight Championship',
+        times: 1,
+        yearFirst: 2023,
+        yearLast: 2024
+      },
+      {
+        name: 'WWE Royal Rumble',
+        times: 1,
+        yearFirst: 2023,
+        yearLast: 2024
+      },
+      {
+        name: 'WWE Money In The Bank',
+        times: 1,
+        yearFirst: 2023,
+        yearLast: 2024
+      },
+      {
+        name: 'WWE Intercontinental Championship',
+        times: 2,
+        yearFirst: 2018,
+        yearLast: 2018
+      },
+      {
+        name: 'WWE United States Championship',
+        times: 2,
+        yearFirst: 2015,
+        yearLast: 2022
+      },
+      {
+        name: 'WWE Tag Team Championships',
+        times: 6,
+        yearFirst: 2013,
+        yearLast: 2023
+      },
+      {
+        name: 'NXT Championship',
+        times: 1,
+        yearFirst: 2013,
+        yearLast: 2023
+      }
+    ],
+    finishers: ['Curb Stomp', 'Pedigree'],
+    signature_moves: ['Falcon Arrow', 'Ripcord Knee'],
+    height: '6\'1"',
+    weight: '217 lbs',
+    birthDate: '1986-05-28',
+    birthplace: {
+      pl: 'Davenport, Iowa',
+      en: 'Davenport, Iowa',
+      de: 'Davenport, Iowa',
+      es: 'Davenport, Iowa'
+    },
+    characteristic: {
+      pl: 'Długie ciemnobrązowe włosy, ekstrawaganckie stroje sceniczne',
+      en: 'Long dark brown hair, extravagant ring gear',
+      de: 'Lange dunkelbraune Haare, extravagante Ringkleidung',
+      es: 'Cabello largo castaño oscuro, atuendos de lucha extravagantes'
+    },
+    funFacts: [
+      {
+        pl: 'Był pierwszym zdobywcą nowego pasa World Heavyweight Championship w 2023 roku',
+        en: 'He was the inaugural World Heavyweight Champion in 2023',
+        de: 'Er war der erste World Heavyweight Champion im Jahr 2023',
+        es: 'Fue el campeón inaugural del World Heavyweight Championship en 2023'
+      },
+      {
+        pl: 'Założył własną szkołę wrestlingu o nazwie Black and Brave Wrestling Academy',
+        en: 'He founded his own wrestling school called Black and Brave Wrestling Academy',
+        de: 'Er gründete seine eigene Wrestling-Schule namens Black and Brave Wrestling Academy',
+        es: 'Fundó su propia escuela de lucha libre llamada Black and Brave Wrestling Academy'
+      },
+      {
+        pl: 'Jest fanem komiksów i metalu, szczególnie zespołu Metallica',
+        en: 'He is a fan of comic books and metal music, especially the band Metallica',
+        de: 'Er ist ein Fan von Comics und Metal-Musik, insbesondere der Band Metallica',
+        es: 'Es fanático de los cómics y la música metal, especialmente de la banda Metallica'
+      }
+    ]
+  },
+  {
+    id: 'undertaker',
+    name: 'The Undertaker',
+    alternateNames: ['The Deadman', 'The Phenom', 'Mean Mark Callous'],
+    currentEmployer: 'WWE (Legend)',
+    currentRoster: 'Retired',
+    yearsActive: {
+      from: 1984,
+      to: 2020
+    },
+    championships: [
+      {
+        name: 'WWE Championship',
+        times: 4,
+        yearFirst: 1991,
+        yearLast: 2002
+      },
+      {
+        name: 'WWE World Heavyweight Championship',
+        times: 3,
+        yearFirst: 2007,
+        yearLast: 2010
+      },
+      {
+        name: 'WWE Tag Team Championships',
+        times: 6,
+        yearFirst: 1999,
+        yearLast: 2007
+      },
+      {
+        name: 'WWE Hardcore Championship',
+        times: 1,
+        yearFirst: 2001,
+        yearLast: 2001
+      },
+      {
+        name: 'WWE Royal Rumble',
+        times: 1,
+        yearFirst: 2007,
+        yearLast: 2007
+      }
+    ],
+    finishers: ['Tombstone Piledriver', 'Hell’s Gate'],
+    signature_moves: ['Chokeslam', 'Old School'],
+    height: '6\'10"',
+    weight: '309 lbs',
+    birthDate: '1965-03-24',
+    birthplace: {
+      pl: 'Houston, Teksas',
+      en: 'Houston, Texas',
+      de: 'Houston, Texas',
+      es: 'Houston, Texas'
+    },
+    characteristic: {
+      pl: 'Długi płaszcz, czarny kapelusz, gotycki styl, mroczna aura',
+      en: 'Long coat, black hat, gothic style, dark presence',
+      de: 'Langer Mantel, schwarzer Hut, gotischer Stil, düstere Ausstrahlung',
+      es: 'Abrigo largo, sombrero negro, estilo gótico, presencia oscura'
+    },
+    funFacts: [
+      {
+        pl: 'Posiada rekord 21 zwycięstw z rzędu na WrestleManii',
+        en: 'Holds a record of 21 consecutive wins at WrestleMania',
+        de: 'Hat einen Rekord von 21 Siegen in Folge bei WrestleMania',
+        es: 'Tiene un récord de 21 victorias consecutivas en WrestleMania'
+      },
+      {
+        pl: 'Jest jednym z najbardziej rozpoznawalnych gimmicków w historii wrestlingu',
+        en: 'One of the most iconic gimmicks in wrestling history',
+        de: 'Eines der bekanntesten Gimmicks in der Wrestling-Geschichte',
+        es: 'Uno de los personajes más icónicos en la historia del wrestling'
+      },
+      {
+        pl: 'W 2022 roku został wprowadzony do WWE Hall of Fame',
+        en: 'Inducted into the WWE Hall of Fame in 2022',
+        de: '2022 in die WWE Hall of Fame aufgenommen',
+        es: 'Incluido en el WWE Hall of Fame en 2022'
+      }
+    ]
+  },
+  {
+    id: 'stone-cold-steve-austin',
+    name: 'Stone Cold Steve Austin',
+    alternateNames: ['The Texas Rattlesnake', 'Steve Williams', "Stone Cold", "Steve Austin"],
+    currentEmployer: 'WWE (Legend)',
+    currentRoster: 'Retired',
+    yearsActive: {
+      from: 1989,
+      to: 2003
+    },
+    championships: [
+      {
+        name: 'WWE Championship',
+        times: 6,
+        yearFirst: 1998,
+        yearLast: 2001
+      },
+      {
+        name: 'WWE Intercontinental Championship',
+        times: 2,
+        yearFirst: 1997,
+        yearLast: 1997
+      },
+      {
+        name: 'WWE Tag Team Championships',
+        times: 4,
+        yearFirst: 1997,
+        yearLast: 2001
+      },
+      {
+        name: 'WWE Royal Rumble',
+        times: 3,
+        yearFirst: 1997,
+        yearLast: 2001
+      },
+      {
+        name: 'WWE King of the Ring',
+        times: 1,
+        yearFirst: 2005,
+        yearLast: 2005
+      },
+      {
+        name: 'WWE Million Dollar Championship',
+        times: 1,
+        yearFirst: 2005,
+        yearLast: 2005
+      }
+    ],
+    finishers: ['Stone Cold Stunner'],
+    signature_moves: ['Lou Thesz Press', 'Mudhole Stomping'],
+    height: '6\'2"',
+    weight: '252 lbs',
+    birthDate: '1964-12-18',
+    birthplace: {
+      pl: 'Austin, Teksas',
+      en: 'Austin, Texas',
+      de: 'Austin, Texas',
+      es: 'Austin, Texas'
+    },
+    characteristic: {
+      pl: 'Łysa głowa, kozia bródka, jeansowe szorty, piwo w ringu',
+      en: 'Bald head, goatee, jean shorts, beer in the ring',
+      de: 'Glatze, Ziegenbart, Jeansshorts, Bier im Ring',
+      es: 'Cabeza calva, perilla, pantalones vaqueros cortos, cerveza en el ring'
+    },
+    funFacts: [
+      {
+        pl: 'Wygrał Royal Rumble trzy razy – najwięcej w historii WWE',
+        en: 'Won the Royal Rumble three times – the most in WWE history',
+        de: 'Dreimaliger Royal Rumble-Sieger – am meisten in der WWE-Geschichte',
+        es: 'Ganó el Royal Rumble tres veces – el máximo en la historia de WWE'
+      },
+      {
+        pl: 'Jego feuda z Vince’em McMahonem to jeden z najbardziej kultowych w historii WWE',
+        en: 'His feud with Vince McMahon is one of the most iconic in WWE history',
+        de: 'Seine Fehde mit Vince McMahon ist eine der bekanntesten in der WWE-Geschichte',
+        es: 'Su rivalidad con Vince McMahon es una de las más icónicas en la historia de WWE'
+      },
+      {
+        pl: 'Po zakończeniu kariery zajął się podcastem i występami w telewizji',
+        en: 'After retiring, he became a podcaster and TV personality',
+        de: 'Nach dem Rücktritt wurde er Podcaster und Fernsehpersönlichkeit',
+        es: 'Tras retirarse, se convirtió en podcaster y personalidad televisiva'
+      }
+    ]
+  },
+  {
+    id: 'randy-orton',
+    name: 'Randy Orton',
+    alternateNames: ['The Viper', 'The Legend Killer'],
+    currentEmployer: 'WWE',
+    currentRoster: 'SmackDown',
+    yearsActive: {
+      from: 2000
+    },
+    championships: [
+      {
+        name: 'WWE Championship',
+        times: 10,
+        yearFirst: 2007,
+        yearLast: 2020
+      },
+      {
+        name: 'WWE World Heavyweight Championship',
+        times: 4,
+        yearFirst: 2004,
+        yearLast: 2013
+      },
+      {
+        name: 'WWE Intercontinental Championship',
+        times: 1,
+        yearFirst: 2003,
+        yearLast: 2004
+      },
+      {
+        name: 'WWE United States Championship',
+        times: 1,
+        yearFirst: 2003,
+        yearLast: 2004
+      },
+      {
+        name: 'WWE Tag Team Championships',
+        times: 4,
+        yearFirst: 2016,
+        yearLast: 2022
+      },
+      {
+        name: 'WWE Royal Rumble',
+        times: 2,
+        yearFirst: 2009,
+        yearLast: 2017
+      },
+      {
+        name: 'WWE Money In The Bank',
+        times: 1,
+        yearFirst: 2005,
+        yearLast: 2005
+      }
+    ],
+    finishers: ['RKO', 'Punt Kick'],
+    signature_moves: ['Elevated DDT', 'Snap Powerslam'],
+    height: '6\'5"',
+    weight: '250 lbs',
+    birthDate: '1980-04-01',
+    birthplace: {
+      pl: 'Knoxville, Tennessee',
+      en: 'Knoxville, Tennessee',
+      de: 'Knoxville, Tennessee',
+      es: 'Knoxville, Tennessee'
+    },
+    characteristic: {
+      pl: 'Tatuaże na ramionach i plecach, lodowaty wzrok, wybuchowy temperament',
+      en: 'Tattoos on arms and back, icy stare, explosive temper',
+      de: 'Tattoos an Armen und Rücken, eisiger Blick, explosives Temperament',
+      es: 'Tatuajes en brazos y espalda, mirada helada, temperamento explosivo'
+    },
+    funFacts: [
+      {
+        pl: 'Jest najmłodszym mistrzem świata w historii WWE – miał 24 lata',
+        en: 'Youngest World Champion in WWE history – 24 years old',
+        de: 'Jüngster Weltmeister in der WWE-Geschichte – 24 Jahre alt',
+        es: 'Campeón mundial más joven en la historia de WWE – 24 años'
+      },
+      {
+        pl: 'Jego RKO to jeden z najbardziej viralowych finisherów',
+        en: 'His RKO is one of the most viral finishers ever',
+        de: 'Sein RKO ist einer der viralsten Finisher überhaupt',
+        es: 'Su RKO es uno de los remates más virales de todos los tiempos'
+      },
+      {
+        pl: 'Pochodzi z rodziny wrestlerów – jego ojciec Bob Orton Jr. też był zawodnikiem WWE',
+        en: 'Comes from a wrestling family – his father Bob Orton Jr. was also a WWE wrestler',
+        de: 'Kommt aus einer Wrestling-Familie – sein Vater Bob Orton Jr. war ebenfalls WWE-Wrestler',
+        es: 'Proviene de una familia de lucha libre – su padre Bob Orton Jr. también fue luchador de WWE'
+      }
+    ]
+  },
+  {
+    id: 'shinsuke-nakamura',
+    name: 'Shinsuke Nakamura',
+    alternateNames: ['The King of Strong Style', "Shinsuke", "Nakamura"],
+    currentEmployer: 'WWE',
+    currentRoster: 'Smackdown',
+    yearsActive: {
+      from: 2002
+    },
+    championships: [
+      {
+        name: 'WWE Intercontinental Championship',
+        times: 2,
+        yearFirst: 2019,
+        yearLast: 2021
+      },
+      {
+        name: 'WWE United States Championship',
+        times: 2,
+        yearFirst: 2018,
+        yearLast: 2019
+      },
+      {
+        name: 'WWE Royal Rumble',
+        times: 1,
+        yearFirst: 2018,
+        yearLast: 2018
+      },
+      {
+        name: 'WWE SmackDown Tag Team Championships',
+        times: 1,
+        yearFirst: 2021,
+        yearLast: 2021
+      },
+      {
+        name: 'NXT Championship',
+        times: 2,
+        yearFirst: 2018,
+        yearLast: 2019
+      }
+    ],
+    finishers: ['Kinshasa'],
+    signature_moves: ['Reverse Exploder Suplex', 'Strong Style Knee Strikes'],
+    height: '6\'2"',
+    weight: '229 lbs',
+    birthDate: '1980-02-24',
+    birthplace: {
+      pl: 'Kyōto, Japonia',
+      en: 'Kyoto, Japan',
+      de: 'Kyoto, Japan',
+      es: 'Kioto, Japón'
+    },
+    characteristic: {
+      pl: 'Ekscentryczny styl, intensywna mimika, czerwony strój ringowy',
+      en: 'Eccentric style, intense facial expressions, red ring gear',
+      de: 'Exzentrischer Stil, intensive Mimik, rotes Ringoutfit',
+      es: 'Estilo excéntrico, expresiones faciales intensas, atuendo rojo'
+    },
+    funFacts: [
+      {
+        pl: 'Był mistrzem IWGP w NJPW zanim przeszedł do WWE',
+        en: 'He was IWGP Champion in NJPW before joining WWE',
+        de: 'Er war IWGP-Champion in NJPW, bevor er zur WWE kam',
+        es: 'Fue campeón de IWGP en NJPW antes de unirse a WWE'
+      },
+      {
+        pl: 'Walczył z legendarnym Brockiem Lesnarem w Japonii',
+        en: 'Fought the legendary Brock Lesnar in Japan',
+        de: 'Kämpfte gegen die Legende Brock Lesnar in Japan',
+        es: 'Luchó contra la leyenda Brock Lesnar en Japón'
+      },
+      {
+        pl: 'Wystąpił w japońskim programie tanecznym i reality show',
+        en: 'Appeared in Japanese dance and reality shows',
+        de: 'Trat in japanischen Tanz- und Reality-Shows auf',
+        es: 'Apareció en programas de baile y realities japoneses'
+      }
+    ]
+  },
+  {
+    id: 'otis',
+    name: 'Otis',
+    alternateNames: ['Otis Dozovic', 'Dozer'],
+    currentEmployer: 'WWE',
+    currentRoster: 'Raw',
+    yearsActive: {
+      from: 2015
+    },
+    championships: [
+      {
+        name: 'WWE Raw Tag Team Championships',
+        times: 1,
+        yearFirst: 2022,
+        yearLast: 2022
+      },
+      {
+        name: 'WWE Money in the Bank',
+        times: 1,
+        yearFirst: 2020,
+        yearLast: 2020
+      }
+    ],
+    finishers: ['Caterpillar', 'Vader Bomb'],
+    signature_moves: ['Corner Splash', 'Spinning Scoop Slam'],
+    height: '5\'10"',
+    weight: '330 lbs',
+    birthDate: '1991-12-21',
+    birthplace: {
+      pl: 'Duluth, Minnesota',
+      en: 'Duluth, Minnesota',
+      de: 'Duluth, Minnesota',
+      es: 'Duluth, Minnesota'
+    },
+    characteristic: {
+      pl: 'Krzepa, śmieszny taniec przed wykonaniem finishera, broda i duża masa ciała',
+      en: 'Stocky build, funny dance before finisher, beard and large physique',
+      de: 'Stämmiger Körperbau, lustiger Tanz vor dem Finisher, Bart und große Statur',
+      es: 'Cuerpo robusto, baile gracioso antes del remate, barba y gran físico'
+    },
+    funFacts: [
+      {
+        pl: 'Jest byłym zapaśnikiem amatorskim – reprezentował USA na mistrzostwach młodzieżowych',
+        en: 'Former amateur wrestler – represented USA in youth championships',
+        de: 'Ehemaliger Amateur-Wrestler – vertrat die USA bei Jugendmeisterschaften',
+        es: 'Exluchador amateur – representó a EE.UU. en campeonatos juveniles'
+      },
+      {
+        pl: 'Stracił walizkę Money in the Bank nawet jej nie wykorzystując',
+        en: 'Lost his Money in the Bank bag even though he didn’t use it',
+        de: 'Verlor seine Money in the Bank Tasche, obwohl er sie nicht benutzte',
+        es: 'Perdió su bolsa Money in the Bank incluso sin usarla'
+      },
+      {
+        pl: 'Jego romans z Mandy Rose był jedną z najpopularniejszych historii 2020 roku',
+        en: 'His romance with Mandy Rose was one of the most popular storylines of 2020',
+        de: 'Seine Romanze mit Mandy Rose war eine der beliebtesten Storylines 2020',
+        es: 'Su romance con Mandy Rose fue una de las historias más populares de 2020'
+      }
+    ]
   }
+  
+  
+  
+  
+  
 ]
 
 // Funkcja do losowego wybierania wrestlera
@@ -396,4 +1315,19 @@ export const checkWrestlerGuess = (wrestler: Wrestler, guess: string): boolean =
   ]
   
   return possibleNames.some(name => name === normalizedGuess)
+}
+
+// Funkcja do obliczania wieku wrestlera na podstawie daty urodzenia
+export const calculateAge = (birthDate: string): number => {
+  const today = new Date()
+  const birthDateObj = new Date(birthDate)
+  let age = today.getFullYear() - birthDateObj.getFullYear()
+  const monthDiff = today.getMonth() - birthDateObj.getMonth()
+  
+  // Jeśli jeszcze nie było urodzin w tym roku, odejmujemy 1 rok
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDateObj.getDate())) {
+    age--
+  }
+  
+  return age
 } 

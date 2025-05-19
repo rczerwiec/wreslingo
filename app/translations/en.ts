@@ -18,6 +18,15 @@ export const en = {
     comingSoon: 'Coming soon...'
   },
   
+  // Wrestler age card
+  wrestlerAge: {
+    title: 'Wrestler Age',
+    birthDate: 'Birth date',
+    age: 'Age',
+    randomize: 'Randomize wrestler',
+    ageHint: 'This wrestler is {age} years old'
+  },
+  
   // Guess Wrestler Game
   guessWrestler: {
     title: 'Guess the Wrestler',
@@ -27,7 +36,8 @@ export const en = {
     status: 'Status',
     origin: 'Origin',
     characteristic: 'Characteristic',
-    yearsActive: 'Career',
+    yearsActive: 'Debut',
+    debutYear: 'Debut year',
     championships: 'Championships',
     finishers: 'Finishers',
     funFact: 'Fun Fact',
@@ -51,16 +61,22 @@ export const en = {
     thatWas: 'That was',
     playAgain: 'Play Again',
     backToGames: 'Back to Games',
-    buyHint: 'Buy hint'
+    buyHint: 'Buy hint',
+    notEnoughPoints: 'Not enough points!'
   },
   
   // Footer
   footer: {
-    about: 'About',
-    contact: 'Contact',
-    terms: 'Terms',
-    privacy: 'Privacy',
-    copyright: '© 2023 WrestlinGo. All rights reserved.',
+    about: 'About WrestlinGo',
+    aboutText: 'A platform for wrestling fans where you can test your knowledge and compete with others in wrestling-themed quizzes.',
+    contact: 'Contact & Partners',
+    legal: 'Legal Information',
+    terms: 'Terms of Service',
+    privacy: 'Privacy Policy',
+    cookies: 'Cookie Policy',
+    copyright: 'All rights reserved.',
+    madeWith: 'Made with ',
+    byWrestlingo: 'by Wrestlingo team',
     language: 'Language'
   }
 } 

@@ -4,7 +4,7 @@ import React, { JSX } from 'react'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Wrestler } from '@/app/types/wrestler'
-import { getRandomWrestler, checkWrestlerGuess } from '@/app/data/wrestlers'
+import { getRandomWrestler, checkWrestlerGuess, calculateAge } from '@/app/data/wrestlers'
 import { useLanguage } from '@/app/contexts/LanguageContext'
 import { motion, AnimatePresence } from 'framer-motion'
 import { 
@@ -23,10 +23,11 @@ import {
   FaUndo,
   FaHome,
   FaCheckCircle,
-  FaSadTear
+  FaSadTear,
+  FaBirthdayCake
 } from 'react-icons/fa'
 
-type HintType = 'physicalStats' | 'workplace' | 'yearsActive' | 'championships' | 'finishers' | 'characteristic' | 'origin' | 'status' | 'funFact1' | 'funFact2' | 'funFact3'
+type HintType = 'physicalStats' | 'workplace' | 'yearsActive' | 'championships' | 'finishers' | 'characteristic' | 'origin' | 'status' | 'funFact1' | 'funFact2' | 'funFact3' | 'age'
 type UnitSystem = 'metric' | 'imperial'
 
 interface HintConfig {
@@ -40,7 +41,7 @@ export default function GuessWrestler() {
   const { t, currentLanguage } = useLanguage()
   const [wrestler, setWrestler] = useState<Wrestler | null>(null)
   const [revealedHints, setRevealedHints] = useState<HintType[]>([])
-  const [score, setScore] = useState(100)
+  const [score, setScore] = useState(150)
   const [guess, setGuess] = useState('')
   const [gameStatus, setGameStatus] = useState<'playing' | 'won' | 'lost'>('playing')
   const [isHintRevealing, setIsHintRevealing] = useState<HintType | null>(null)
@@ -89,35 +90,41 @@ export default function GuessWrestler() {
       points: 20,
       priority: 6
     },
+    age: {
+      label: t.wrestlerAge.age,
+      icon: <FaBirthdayCake />,
+      points: 15,
+      priority: 7
+    },
     championships: {
       label: t.guessWrestler.championships,
       icon: <FaTrophy />,
       points: 25,
-      priority: 8
+      priority: 9
     },
     finishers: {
       label: t.guessWrestler.finishers,
       icon: <FaBolt />,
       points: 20,
-      priority: 7
+      priority: 8
     },
     funFact1: {
       label: `${t.guessWrestler.funFact} 1`,
       icon: <FaLightbulb />,
       points: 30,
-      priority: 9
+      priority: 10
     },
     funFact2: {
       label: `${t.guessWrestler.funFact} 2`,
       icon: <FaThumbsUp />,
       points: 30,
-      priority: 10
+      priority: 11
     },
     funFact3: {
       label: `${t.guessWrestler.funFact} 3`,
       icon: <FaMedal />,
       points: 30,
-      priority: 11
+      priority: 12
     }
   }
 
@@ -209,27 +216,59 @@ export default function GuessWrestler() {
       case 'characteristic':
         return getLocalizedValue(wrestler.characteristic)
       case 'yearsActive':
-        return `${t.guessWrestler.yearsActive.split(' ')[0]} ${wrestler.yearsActive.from}${wrestler.yearsActive.to ? ` ${t.guessWrestler.yearsActive.split(' ')[2]} ${wrestler.yearsActive.to}` : ` (${t.guessWrestler.active})`}`
+        return (
+          <div className="flex flex-col items-center justify-center">
+            <span className="text-3xl font-bold text-blue-300">{wrestler.yearsActive.from}</span>
+            <span className="text-xs mt-1 text-blue-200 uppercase tracking-wider">{t.guessWrestler.debutYear}</span>
+          </div>
+        )
       case 'championships':
-        return wrestler.championships
-          .map(c => `${c.name} (${c.times}x)`)
-          .join(', ')
+        return (
+          <div className="text-xs">
+            <ul className="list-disc pl-4 space-y-1">
+              {wrestler.championships.map((championship, index) => (
+                <li key={index} className="leading-tight">
+                  {championship.name} 
+                  <span className="text-blue-300">
+                    {' '}({championship.times}x)
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
       case 'finishers':
-        return wrestler.finishers.join(', ')
+        return (
+          <div className="text-xs">
+            <ul className="list-disc pl-4 space-y-1">
+              {wrestler.finishers.map((finisher, index) => (
+                <li key={index} className="leading-tight">{finisher}</li>
+              ))}
+            </ul>
+          </div>
+        )
       case 'funFact1':
         return getLocalizedValue(wrestler.funFacts[0])
       case 'funFact2':
         return getLocalizedValue(wrestler.funFacts[1])
       case 'funFact3':
         return getLocalizedValue(wrestler.funFacts[2])
+      case 'age':
+        return (
+          <div className="text-center">
+            <span className="text-2xl font-bold">{calculateAge(wrestler.birthDate)}</span>
+            <span className="text-sm block text-blue-300 mt-1">{t.wrestlerAge.age}</span>
+          </div>
+        )
       default:
         return ''
     }
   }
 
   const getRandomUnrevealedHint = (): HintType | null => {
+    // Filtrujemy tylko te podpowiedzi, które nie są ciekawostkami
     const availableHints = Object.keys(HINTS_CONFIG)
-      .filter(type => !revealedHints.includes(type as HintType)) as HintType[]
+      .filter(type => !revealedHints.includes(type as HintType) && !type.startsWith('funFact')) as HintType[]
 
     if (availableHints.length === 0) return null
     
@@ -273,11 +312,19 @@ export default function GuessWrestler() {
       }])
       
       // Losowe odkrycie następnej wskazówki po błędnej odpowiedzi
+      // Ale tylko takiej, która nie jest ciekawostką
       const nextHint = getRandomUnrevealedHint()
       if (nextHint) {
         revealHint(nextHint)
       } else {
-        setGameStatus('lost')
+        // Jeśli nie ma więcej standardowych podpowiedzi, nie kończymy gry
+        // Gracz może nadal kupić ciekawostki
+        const funFactsAvailable = Object.keys(HINTS_CONFIG)
+          .filter(type => !revealedHints.includes(type as HintType) && type.startsWith('funFact')).length > 0
+        
+        if (!funFactsAvailable) {
+          setGameStatus('lost')
+        }
       }
     }
     setGuess('')
@@ -287,7 +334,7 @@ export default function GuessWrestler() {
     const newWrestler = getRandomWrestler()
     setWrestler(newWrestler)
     setRevealedHints([])
-    setScore(100)
+    setScore(150)
     setGuess('')
     setGameStatus('playing')
     setGuessHistory([])
@@ -356,6 +403,26 @@ export default function GuessWrestler() {
       }
     }
   };
+
+  // Dodajemy funkcję handle do kupowania ciekawostek
+  const handleBuyHint = (hintType: HintType) => {
+    if (!wrestler || revealedHints.includes(hintType)) return
+    
+    if (gameStatus === 'playing') {
+      // Sprawdzamy, czy gracz ma wystarczającą liczbę punktów
+      const hintCost = HINTS_CONFIG[hintType].points
+      
+      if (score >= hintCost) {
+        // Odejmujemy punkty i odkrywamy podpowiedź
+        setScore(prev => Math.max(0, prev - hintCost))
+        revealHint(hintType)
+      } else {
+        // Pokazujemy komunikat o braku punktów
+        setErrorMessage(t.guessWrestler.notEnoughPoints)
+        setTimeout(() => setErrorMessage(null), 3000)
+      }
+    }
+  }
 
   return (
     <motion.div 
@@ -490,7 +557,7 @@ export default function GuessWrestler() {
                       variants={hintVariants}
                       animate={isRevealed ? "revealed" : "visible"}
                       whileHover={{ scale: canBuy ? 1.02 : 1 }}
-                      onClick={() => canBuy && revealHint(type as HintType)}
+                      onClick={() => canBuy && handleBuyHint(type as HintType)}
                     >
                       <div className="p-4">
                         <div className="flex items-center justify-between mb-2">
@@ -526,6 +593,10 @@ export default function GuessWrestler() {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 whileTap={{ scale: 0.95 }}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  handleBuyHint(type as HintType);
+                                }}
                               >
                                 <FaLightbulb className="text-xs" /> {t.guessWrestler.buyHint}
                               </motion.button>
@@ -725,6 +796,21 @@ export default function GuessWrestler() {
           </div>
         </div>
       </motion.div>
+
+      {/* Komunikat o błędzie */}
+      <AnimatePresence>
+        {errorMessage && (
+          <motion.div 
+            className="fixed top-4 right-4 bg-red-600/80 text-white px-4 py-2 rounded-lg shadow-lg"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+          >
+            {errorMessage}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   )
 } 

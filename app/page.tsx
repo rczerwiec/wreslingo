@@ -27,30 +27,90 @@ export default function Home() {
     }
   };
   
+  // Animacja dla liter w nagłówku
+  const titleLetterVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.08,
+        duration: 0.5,
+        type: 'spring',
+        stiffness: 100
+      }
+    })
+  };
+  
   return (
     <div className="space-y-12">
+      <style jsx global>{`
+        .text-gradient-blue {
+          background: linear-gradient(to right, #ffffff, #3b82f6);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+        }
+        
+        .text-gradient-gold {
+          background: linear-gradient(to right, #3b82f6, #06b6d4);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+        }
+      `}</style>
+      
       <motion.section 
-        className="text-center"
+        className="text-center pt-8"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <motion.h1 
-          className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent mb-6"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          {t.home.welcome}
-        </motion.h1>
-        <motion.p 
-          className="text-xl text-blue-200"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        >
-          {t.home.subtitle}
-        </motion.p>
+        <div className="relative">
+          {/* Efekt glow dla tytułu */}
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-20 bg-blue-500 blur-[50px] opacity-20 animate-pulse"></div>
+          
+          {/* Animowany tytuł */}
+          <div className="text-4xl md:text-6xl font-extrabold mb-8 relative">
+            <h1 className="sr-only">{t.home.welcome}</h1>
+            <div className="flex justify-center relative z-10">
+              {t.home.welcome.split('').map((letter, index) => (
+                <motion.span
+                  key={index}
+                  custom={index}
+                  variants={titleLetterVariants}
+                  initial="hidden"
+                  animate="visible"
+                  className={`inline-block ${letter === ' ' ? 'ml-4' : ''} ${
+                    index < 10 ? 'text-gradient-blue' : 'text-gradient-gold'
+                  }`}
+                  style={{
+                    textShadow: '0 0 15px rgba(59, 130, 246, 0.5)'
+                  }}
+                >
+                  {letter}
+                </motion.span>
+              ))}
+            </div>
+            
+            {/* Podkreślenie */}
+            <motion.div 
+              className="h-1 bg-gradient-to-r from-blue-500 to-cyan-400 rounded w-0 mx-auto mt-2"
+              initial={{ width: 0 }}
+              animate={{ width: "50%" }}
+              transition={{ delay: 1.2, duration: 0.8 }}
+            />
+          </div>
+          
+          <motion.p 
+            className="text-xl text-blue-200 relative z-10"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1.5 }}
+          >
+            {t.home.subtitle}
+          </motion.p>
+        </div>
       </motion.section>
 
       <motion.section 
