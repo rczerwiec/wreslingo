@@ -339,8 +339,9 @@ export default function GuessWrestler() {
     setGameStatus('playing')
     setGuessHistory([])
 
-    // Losujemy pierwszą podpowiedź
-    const availableHints = Object.keys(HINTS_CONFIG) as HintType[]
+    // Losujemy pierwszą podpowiedź (niebędącą ciekawostką)
+    const availableHints = Object.keys(HINTS_CONFIG)
+      .filter(type => !type.startsWith('funFact')) as HintType[]
     const randomIndex = Math.floor(Math.random() * availableHints.length)
     const firstHint = availableHints[randomIndex]
     setRevealedHints([firstHint])

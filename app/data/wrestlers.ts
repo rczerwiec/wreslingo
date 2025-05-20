@@ -1292,7 +1292,589 @@ export const wrestlers: Wrestler[] = [
         es: 'Su romance con Mandy Rose fue una de las historias más populares de 2020'
       }
     ]
+  },
+  {
+    id: 'aleister-black',
+    name: 'Aleister Black',
+    alternateNames: ['Tommy End', 'Malakai Black'],
+    currentEmployer: 'WWE',
+    currentRoster: 'Smackdown',
+    yearsActive: {
+      from: 2002
+    },
+    championships: [
+      {
+        name: 'NXT Championship',
+        times: 1,
+        yearFirst: 2018,
+        yearLast: 2018
+      },
+      {
+        name: 'AEW World Trios Championship',
+        times: 1,
+        yearFirst: 2022,
+        yearLast: 2022
+      }
+    ],
+    finishers: ['Black Mass'],
+    signature_moves: ['Fade to Black', 'Double Foot Stomp', 'Running Knee Strike'],
+    height: '5\'11"',
+    weight: '215 lbs',
+    birthDate: '1985-11-19',
+    birthplace: {
+      pl: 'Amsterdam, Holandia',
+      en: 'Amsterdam, Netherlands',
+      de: 'Amsterdam, Niederlande',
+      es: 'Ámsterdam, Países Bajos'
+    },
+    characteristic: {
+      pl: 'Czarne tatuaże pokrywające ciało, mistyczny i mroczny styl wejścia na ring',
+      en: 'Black tattoos covering the body, mystical and dark entrance style',
+      de: 'Schwarze Tattoos am ganzen Körper, mystischer und dunkler Ringauftritt',
+      es: 'Tatuajes negros por todo el cuerpo, estilo de entrada místico y oscuro'
+    },
+    funFacts: [
+      {
+        pl: 'Jest wyznawcą buddyzmu i jego styl walki jest inspirowany sztukami walki',
+        en: 'He practices Buddhism and his fighting style is inspired by martial arts',
+        de: 'Er praktiziert Buddhismus und sein Kampfstil ist von Kampfkünsten inspiriert',
+        es: 'Practica el budismo y su estilo de lucha está inspirado en las artes marciales'
+      },
+      {
+        pl: 'Był liderem frakcji w AEW',
+        en: 'He was the leader of the faction in AEW',
+        de: 'Er war der Anführer der Fraktion in AEW',
+        es: 'Él fue el líder de la facción en AEW'
+      },
+      {
+        pl: 'W WWE zasłynął niesamowitymi wejściami z podnoszącej się platformy',
+        en: 'In WWE, he was known for his spectacular rising platform entrance',
+        de: 'In der WWE war er bekannt für seinen spektakulären Plattform-Einzug',
+        es: 'En WWE fue conocido por su espectacular entrada con plataforma elevadora'
+      }
+    ]
+  },
+  {
+    id: 'big-show',
+    name: 'Big Show',
+    alternateNames: ['Paul Wight', 'The Giant'],
+    currentEmployer: 'AEW',
+    currentRoster: 'Dynamite',
+    yearsActive: {
+      from: 1995,
+      to: 2021
+    },
+    championships: [
+      {
+        name: 'WWE Championship',
+        times: 2,
+        yearFirst: 1999,
+        yearLast: 2002
+      },
+      {
+        name: 'WWE World Heavyweight Championship',
+        times: 2,
+        yearFirst: 2011,
+        yearLast: 2012
+      },
+      {
+        name: 'ECW World Championship',
+        times: 1,
+        yearFirst: 2000,
+        yearLast: 2000
+      },
+      {
+        name: 'WCW World Heavyweight Championship',
+        times: 2,
+        yearFirst: 2002,
+        yearLast: 2002
+      },
+      {
+        name: 'WWE Intercontinental Championship',
+        times: 1,
+        yearFirst: 2006,
+        yearLast: 2006
+      },
+      {
+        name: 'WWE United States Championship',
+        times: 1,
+        yearFirst: 2012,
+        yearLast: 2012
+      },
+      {
+        name: 'WWE Hardcore Championship',
+        times: 3,
+        yearFirst: 2003,
+        yearLast: 2004
+      },
+      {
+        name: 'WWE Tag Team Championships',
+        times: 8,
+        yearFirst: 2002,
+        yearLast: 2016
+      },
+      {
+        name: 'Andre the Giant Memorial Battle Royal',
+        times: 1,
+        yearFirst: 2015,
+        yearLast: 2015
+      }
+    ],
+    finishers: ['KO Punch', 'Chokeslam'],
+    signature_moves: ['Shoulder Block', 'Final Cut', 'Open Hand Chop'],
+    height: '7\'0"',
+    weight: '383 lbs',
+    birthDate: '1972-02-08',
+    birthplace: {
+      pl: 'Aiken, Karolina Południowa',
+      en: 'Aiken, South Carolina',
+      de: 'Aiken, South Carolina',
+      es: 'Aiken, Carolina del Sur'
+    },
+    characteristic: {
+      pl: 'Olbrzymi wzrost i masa, łysy z brodą, często występuje jako heel lub face zamiennie',
+      en: 'Gigantic height and mass, bald with a beard, often switches between heel and face',
+      de: 'Gigantische Größe und Masse, kahl mit Bart, wechselt oft zwischen Heel und Face',
+      es: 'Tamaño y peso gigantescos, calvo con barba, cambia frecuentemente entre heel y face'
+    },
+    funFacts: [
+      {
+        pl: 'Zadebiutował w jako syn (fabularnie) Andre the Gianta',
+        en: 'Debuted in kayfabe as the son of Andre the Giant',
+        de: 'Debütierte in kayfabe als Sohn von Andre the Giant',
+        es: 'Debutó en kayfabe como hijo de André the Giant'
+      },
+      {
+        pl: 'Jest jedynym wrestlerem, który zdobył mistrzostwa WWE, WCW, ECW i World Heavyweight',
+        en: 'He is the only wrestler to win WWE, WCW, ECW and World Heavyweight Championships',
+        de: 'Er ist der einzige Wrestler, der WWE-, WCW-, ECW- und World-Heavyweight-Titel gewann',
+        es: 'Es el único luchador que ganó campeonatos de WWE, WCW, ECW y World Heavyweight'
+      },
+      {
+        pl: 'Zagrał w kilku filmach i serialach, w tym w „The Waterboy” i show promowanym jego własnym imieniem',
+        en: 'Acted in several movies and shows, including “The Waterboy” and a show named after his own name',
+        de: 'Spielte in mehreren Filmen und Serien mit, darunter „The Waterboy“ und einem Show, das nach seinem eigenen Namen benannt ist',
+        es: 'Actuó en varias películas y series, incluyendo “The Waterboy” y un show llamado después de su propio nombre'
+      }
+    ]
+  },
+  {
+    id: 'joe-hendry',
+    name: 'Joe Hendry',
+    alternateNames: ['The Prestigious One'],
+    currentEmployer: 'TNA Wrestling',
+    currentRoster: 'TNA',
+    yearsActive: {
+      from: 2013
+    },
+    championships: [
+      {
+        name: 'TNA World Championship',
+        times: 1,
+        yearFirst: 2022,
+        yearLast: 2023
+      },
+      {
+        name: 'Impact Digital Media Championship',
+        times: 1,
+        yearFirst: 2017,
+        yearLast: 2017
+      }
+    ],
+    finishers: ['Standing Ovation', 'Chokeslam'],
+    signature_moves: ['Fallaway Slam', 'Delayed Vertical Suplex', 'Pop-Up Powerbomb'],
+    height: '6\'2"',
+    weight: '240 lbs',
+    birthDate: '1988-05-01',
+    birthplace: {
+      pl: 'Edynburg, Szkocja',
+      en: 'Edinburgh, Scotland',
+      de: 'Edinburgh, Schottland',
+      es: 'Edimburgo, Escocia'
+    },
+    characteristic: {
+      pl: 'Charyzmatyczny, często śpiewa własne piosenki przed walkami, dobrze zbudowany',
+      en: 'Charismatic, often sings his own entrance songs, well-built physique',
+      de: 'Charismatisch, singt oft eigene Entrance-Songs, gut gebaut',
+      es: 'Carismático, a menudo canta sus propias canciones de entrada, bien formado físicamente'
+    },
+    funFacts: [
+      {
+        pl: 'Jest także profesjonalnym muzykiem – komponuje i wykonuje własne utwory wejściowe',
+        en: 'He is also a professional musician – he composes and performs his own entrance songs',
+        de: 'Er ist auch ein professioneller Musiker – komponiert und singt eigene Entrance-Songs',
+        es: 'También es músico profesional: compone e interpreta sus propias canciones de entrada'
+      },
+      {
+        pl: 'Reprezentował Szkocję w zapasach amatorskich na Igrzyskach Wspólnoty Narodów 2018',
+        en: 'Represented Scotland in amateur wrestling at the 2018 Commonwealth Games',
+        de: 'Vertrat Schottland im Amateur-Wrestling bei den Commonwealth Games 2018',
+        es: 'Representó a Escocia en lucha amateur en los Juegos de la Commonwealth de 2018'
+      },
+      {
+        pl: 'Stał się viralem dzięki swojemu wejściu.',
+        en: 'Went viral with his entrance.',
+        de: 'Wurde viral mit seinem Eintritt',
+        es: 'Se volvió viral con su entrada'
+      }
+    ]
+  },
+  {
+    id: 'santino-marella',
+    name: 'Santino Marella',
+    alternateNames: ['Anthony Carelli', 'The Milan Miracle'],
+    currentEmployer: 'TNA Wrestling',
+    currentRoster: 'Authority Figure / Occasional Wrestler',
+    yearsActive: {
+      from: 2005,
+      to: 2014
+    },
+    championships: [
+      {
+        name: 'WWE Intercontinental Championship',
+        times: 2,
+        yearFirst: 2007,
+        yearLast: 2008
+      },
+      {
+        name: 'WWE United States Championship',
+        times: 1,
+        yearFirst: 2012,
+        yearLast: 2012
+      },
+      {
+        name: 'WWE Tag Team Championships',
+        times: 1,
+        yearFirst: 2011,
+        yearLast: 2011
+      },
+      {
+        name: 'Miss WrestleMania',
+        times: 1,
+        yearFirst: 2009,
+        yearLast: 2009
+      }
+    ],
+    finishers: ['Cobra Strike', 'Marella Driver'],
+    signature_moves: ['Hip Toss', 'Split Leg Drop', 'Judo Throw'],
+    height: '5\'10"',
+    weight: '233 lbs',
+    birthDate: '1974-03-14',
+    birthplace: {
+      pl: 'Mississauga, Ontario, Kanada',
+      en: 'Mississauga, Ontario, Canada',
+      de: 'Mississauga, Ontario, Kanada',
+      es: 'Mississauga, Ontario, Canadá'
+    },
+    characteristic: {
+      pl: 'Komiczny styl walki, charakterystyczna „kobra” jako finisher, wąsy i gesty sceniczne',
+      en: 'Comedic wrestling style, signature “cobra” finisher, mustache and theatrical gestures',
+      de: 'Komödiantischer Stil, typischer “Cobra”-Finisher, Schnurrbart und theatralische Gesten',
+      es: 'Estilo cómico de lucha, remate “cobra” característico, bigote y gestos teatrales'
+    },
+    funFacts: [
+      {
+        pl: 'Zadebiutował niespodziewanie w WWE jako „fan z publiczności”, który pokonał Umagę',
+        en: 'Debuted in WWE as a “fan from the audience” who defeated Umaga',
+        de: 'Debütierte in der WWE als „Fan aus dem Publikum“, der Umaga besiegte',
+        es: 'Debutó en WWE como un “fan del público” que venció a Umaga'
+      },
+      {
+        pl: 'Występował też jako jego rzekoma „siostra bliźniaczka”',
+        en: 'Also performed as his supposed “twin sister”',
+        de: 'Trat auch als seine angebliche „Zwillingsschwester“ auf',
+        es: 'También actuó como su supuesta “hermana gemela”'
+      },
+      {
+        pl: 'Występował w polskiej federacji PTW.',
+        en: 'After retiring, he opened a judo academy and became a TNA commentator',
+        de: 'Nach dem Rücktritt eröffnete er eine Judo-Akademie und wurde TNA-Kommentator',
+        es: 'Tras retirarse, abrió una academia de judo y se convirtió en comentarista de TNA'
+      }
+    ]
+  },
+  {
+    id: 'omos',
+    name: 'Omos',
+    alternateNames: ['Jordan Omogbehin', 'The Nigerian Giant'],
+    currentEmployer: 'WWE',
+    currentRoster: 'RAW',
+    yearsActive: {
+      from: 2019
+    },
+    championships: [
+      {
+        name: 'WWE RAW Tag Team Championship',
+        times: 1,
+        yearFirst: 2021,
+        yearLast: 2021
+      }
+    ],
+    finishers: ['Double Handed Chokeslam'],
+    signature_moves: ['Two-Handed Toss', 'Running Corner Splash', 'Big Boot'],
+    height: '7\'3"',
+    weight: '410 lbs',
+    birthDate: '1994-05-16',
+    birthplace: {
+      pl: 'Lagos, Nigeria',
+      en: 'Lagos, Nigeria',
+      de: 'Lagos, Nigeria',
+      es: 'Lagos, Nigeria'
+    },
+    characteristic: {
+      pl: 'Olbrzymi wzrost, potężna sylwetka, dominujący styl walki',
+      en: 'Gigantic height, massive physique, dominant in-ring style',
+      de: 'Riesige Körpergröße, massige Statur, dominanter Wrestling-Stil',
+      es: 'Altura gigantesca, físico imponente, estilo dominante en el ring'
+    },
+    funFacts: [
+      {
+        pl: 'Grał w koszykówkę w NCAA zanim przeszedł do WWE',
+        en: 'Played college basketball in the NCAA before joining WWE',
+        de: 'Spielte NCAA-College-Basketball, bevor er zur WWE kam',
+        es: 'Jugó baloncesto universitario en la NCAA antes de unirse a WWE'
+      },
+      {
+        pl: 'Zadebiutował w WWE jako bodyguard dla Akiry Tozawy i AJ Stylesa',
+        en: 'Debuted in WWE as a bodyguard for Akira Tozawa and later AJ Styles',
+        de: 'Debütierte in der WWE als Bodyguard für Akira Tozawa und später AJ Styles',
+        es: 'Debutó en WWE como guardaespaldas de Akira Tozawa y luego de AJ Styles'
+      },
+      {
+        pl: 'Jest jednym z najwyższych zawodników w historii WWE',
+        en: 'He is one of the tallest wrestlers in WWE history',
+        de: 'Er ist einer der größten Wrestler in der WWE-Geschichte',
+        es: 'Es uno de los luchadores más altos en la historia de WWE'
+      }
+    ]
+  },
+  {
+    id: 'the-rock',
+    name: 'The Rock',
+    alternateNames: ['Dwayne Johnson', 'The Great One', 'The People\'s Champion'],
+    currentEmployer: 'WWE',
+    currentRoster: 'Part-time',
+    yearsActive: {
+      from: 1996,
+      to: 2004
+    },
+    championships: [
+      {
+        name: 'WWE Championship',
+        times: 8,
+        yearFirst: 1998,
+        yearLast: 2013
+      },
+      {
+        name: 'WCW Championship',
+        times: 1,
+        yearFirst: 2019,
+        yearLast: 2019
+      },
+      {
+        name: 'WWE Intercontinental Championship',
+        times: 2,
+        yearFirst: 1997,
+        yearLast: 1997
+      },
+      {
+        name: 'WWE Tag Team Championships',
+        times: 5,
+        yearFirst: 1999,
+        yearLast: 2001
+      },
+      {
+        name: 'WWE Royal Rumble',
+        times: 1,
+        yearFirst: 2000,
+        yearLast: 2000
+      }
+    ],
+    finishers: ['Rock Bottom', 'People’s Elbow'],
+    signature_moves: ['Samoan Drop', 'Diving Clothesline', 'Sharpshooter'],
+    height: '6\'5"',
+    weight: '260 lbs',
+    birthDate: '1972-05-02',
+    birthplace: {
+      pl: 'Hayward, Kalifornia, USA',
+      en: 'Hayward, California, USA',
+      de: 'Hayward, Kalifornien, USA',
+      es: 'Hayward, California, EE. UU.'
+    },
+    characteristic: {
+      pl: 'Niesamowita charyzma, muskulatura, ikoniczne okulary przeciwsłoneczne i hasła',
+      en: 'Incredible charisma, muscular build, iconic sunglasses and catchphrases',
+      de: 'Unglaubliche Ausstrahlung, muskulöser Körperbau, ikonische Sonnenbrille und Sprüche',
+      es: 'Carisma increíble, físico musculoso, gafas de sol icónicas y frases pegajosas'
+    },
+    funFacts: [
+      {
+        pl: 'Jest jednym z najbardziej rozpoznawalnych aktorów Hollywood',
+        en: 'He is one of the most recognizable actors in Hollywood',
+        de: 'Er ist einer der bekanntesten Schauspieler in Hollywood',
+        es: 'Es uno de los actores más reconocidos de Hollywood'
+      },
+      {
+        pl: 'Pochodzi z legendarnej rodziny zapaśniczej Anoa\'i',
+        en: 'He comes from the legendary Anoa\'i wrestling family',
+        de: 'Er stammt aus der legendären Anoa\'i-Wrestlingfamilie',
+        es: 'Proviene de la legendaria familia de lucha libre Anoa\'i'
+      },
+      {
+        pl: 'Jego powiedzenia przeszły do popkultury',
+        en: 'His catchphrases became pop culture icons',
+        de: 'Seine Sprüche wurden zu Popkultur-Ikonen',
+        es: 'Sus frases se convirtieron en íconos culturales'
+      }
+    ]
+  },
+  {
+    id: 'johnny-gargano',
+    name: 'Johnny Gargano',
+    alternateNames: ['Johnny Wrestling'],
+    currentEmployer: 'WWE',
+    currentRoster: 'SmackDown',
+    yearsActive: {
+      from: 2005
+    },
+    championships: [
+      {
+        name: 'WWE Tag Team Championships',
+        times: 2,
+        yearFirst: 2022,
+        yearLast: 2022
+      },
+      {
+        name: 'NXT Championship',
+        times: 1,
+        yearFirst: 2019,
+        yearLast: 2019
+      },
+      {
+        name: 'NXT North American Championship',
+        times: 3,
+        yearFirst: 2019,
+        yearLast: 2021
+      },
+      {
+        name: 'NXT Tag Team Championship',
+        times: 1,
+        yearFirst: 2016,
+        yearLast: 2017
+      }
+    ],
+    finishers: ['Gargano Escape', 'One Final Beat'],
+    signature_moves: ['Slingshot DDT', 'Superkick', 'Lawn Dart'],
+    height: '5\'10"',
+    weight: '199 lbs',
+    birthDate: '1987-08-14',
+    birthplace: {
+      pl: 'Cleveland, Ohio',
+      en: 'Cleveland, Ohio',
+      de: 'Cleveland, Ohio',
+      es: 'Cleveland, Ohio'
+    },
+    characteristic: {
+      pl: 'Niski wzrost, ogromna zwinność i serce do walki',
+      en: 'Short stature, great agility, and a big fighting heart',
+      de: 'Kleine Statur, große Beweglichkeit und viel Kampfgeist',
+      es: 'Estatura baja, gran agilidad y mucho corazón luchador'
+    },
+    funFacts: [
+      {
+        pl: 'Pierwszy zawodnik w historii NXT, który zdobył Triple Crown',
+        en: 'First Triple Crown Champion in NXT history',
+        de: 'Erster Triple Crown Champion in der NXT-Geschichte',
+        es: 'Primer campeón Triple Corona en la historia de NXT'
+      },
+      {
+        pl: 'Jego żona również jest wrestlerką WWE',
+        en: 'His wife is also a WWE wrestler',
+        de: 'Seine Ehefrau ist ebenfalls eine WWE-Wrestlerin',
+        es: 'Su esposa también es una luchadora de WWE'
+      },
+      {
+        pl: 'Znany ze swoich emocjonalnych pojedynków i długich rywalizacji',
+        en: 'Known for his emotional matches and long rivalries',
+        de: 'Bekannt für seine emotionalen Matches und langen Rivalitäten',
+        es: 'Conocido por sus combates emocionales y largas rivalidades'
+      }
+    ]
+  },
+  {
+    id: 'austin-theory',
+    name: 'Austin Theory',
+    alternateNames: ['All Day', 'The Now'],
+    currentEmployer: 'WWE',
+    currentRoster: 'SmackDown',
+    yearsActive: {
+      from: 2016
+    },
+    championships: [
+      {
+        name: 'WWE United States Championship',
+        times: 2,
+        yearFirst: 2022,
+        yearLast: 2023
+      },
+      {
+        name: 'Money in the Bank',
+        times: 1,
+        yearFirst: 2022,
+        yearLast: 2022
+      },
+      {
+        name: 'WWE Tag Team Championships',
+        times: 1,
+        yearFirst: 2022,
+        yearLast: 2022
+      }
+    ],
+    finishers: ['A-Town Down'],
+    signature_moves: ['Rolling Dropkick', 'Fallaway Slam', 'Standing Moonsault'],
+    height: '6\'1"',
+    weight: '220 lbs',
+    birthDate: '1997-08-02',
+    birthplace: {
+      pl: 'McDonough, Georgia',
+      en: 'McDonough, Georgia',
+      de: 'McDonough, Georgia',
+      es: 'McDonough, Georgia'
+    },
+    characteristic: {
+      pl: 'Młody, umięśniony, pełen pewności siebie i arogancji',
+      en: 'Young, muscular, full of confidence and arrogance',
+      de: 'Jung, muskulös, voller Selbstvertrauen und Arroganz',
+      es: 'Joven, musculoso, lleno de confianza y arrogancia'
+    },
+    funFacts: [
+      {
+        pl: 'Był najmłodszym posiadaczem walizki Money in the Bank w historii WWE',
+        en: 'He was the youngest Money in the Bank holder in WWE history',
+        de: 'Er war der jüngste Money-in-the-Bank-Gewinner in der WWE-Geschichte',
+        es: 'Fue el ganador más joven de Money in the Bank en la historia de WWE'
+      },
+      {
+        pl: 'Był „wybrańcem” Vince’a McMahona w fabule prowadzącej do WrestleManii 38',
+        en: 'He was Vince McMahon’s “chosen one” in the storyline leading to WrestleMania 38',
+        de: 'Er war Vince McMahons „Auserwählter“ in der Storyline vor WrestleMania 38',
+        es: 'Fue el “elegido” de Vince McMahon en la historia que llevó a WrestleMania 38'
+      },
+      {
+        pl: 'Zaczął karierę jako kulturysta i wygrał kilka lokalnych zawodów',
+        en: 'He started his career as a bodybuilder and won several local competitions',
+        de: 'Er begann seine Karriere als Bodybuilder und gewann mehrere lokale Wettbewerbe',
+        es: 'Comenzó su carrera como culturista y ganó varias competiciones locales'
+      }
+    ]
   }
+  
+  
+  
+  
+  
+  
+  
   
   
   
