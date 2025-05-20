@@ -1,7 +1,7 @@
 'use client'
 
-import { useLanguage } from './contexts/LanguageContext';
-import { FaUserSecret, FaGamepad, FaTrophy } from 'react-icons/fa';
+import { useLanguage, TranslationType } from './contexts/LanguageContext';
+import { FaUserSecret, FaGamepad, FaTrophy, FaCamera, FaMusic } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 export default function Home() {
@@ -149,44 +149,62 @@ export default function Home() {
           </div>
         </motion.div>
 
-        {/* Placeholder na przyszłe gry */}
+        {/* Karta 4 Próby */}
         <motion.div className="group" variants={itemVariants}>
-          <div className="relative bg-black/20 backdrop-blur-sm rounded-xl overflow-hidden border border-white/5">
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-500/5 to-blue-500/5"></div>
+          <div className="relative bg-black/30 backdrop-blur-md rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 border border-white/10">
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="p-6 relative z-10">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-2xl font-bold text-gray-400 flex items-center gap-2">
-                  <FaGamepad className="text-gray-500" />
-                  {t.home.moreGamesSoon}
+                <h3 className="text-2xl font-bold text-white group-hover:text-purple-300 transition-colors duration-300 flex items-center gap-2">
+                  <FaCamera className="text-purple-300 group-hover:text-white transition-colors duration-300" />
+                  {t.fourTries.title}
                 </h3>
               </div>
-              <p className="text-gray-400 mb-6">
-                {t.home.workingOnNewChallenges}
+              <p className="text-blue-200 mb-6 group-hover:text-white transition-colors duration-300">
+                {t.home.fourTriesDesc}
               </p>
-              <div className="w-full h-12 bg-white/5 rounded-lg flex items-center justify-center">
-                <span className="text-gray-500">{t.home.comingSoon}</span>
-              </div>
+              <motion.a
+                href="/games/four-tries"
+                className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg transform hover:scale-[1.02] transition-all duration-300 font-medium"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = '/games/four-tries';
+                }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {t.home.playNow}
+              </motion.a>
             </div>
           </div>
         </motion.div>
         
-        {/* Drugi placeholder na przyszłe gry */}
+        {/* Karta Jaka to melodia */}
         <motion.div className="group" variants={itemVariants}>
-          <div className="relative bg-black/20 backdrop-blur-sm rounded-xl overflow-hidden border border-white/5">
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-500/5 to-blue-500/5"></div>
+          <div className="relative bg-black/30 backdrop-blur-md rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300 border border-white/10">
+            <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="p-6 relative z-10">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-2xl font-bold text-gray-400 flex items-center gap-2">
-                  <FaTrophy className="text-gray-500" />
-                  {t.home.moreGamesSoon}
+                <h3 className="text-2xl font-bold text-white group-hover:text-green-300 transition-colors duration-300 flex items-center gap-2">
+                  <FaMusic className="text-green-300 group-hover:text-white transition-colors duration-300" />
+                  {t.themeSong?.title || "Jaka to melodia?"}
                 </h3>
               </div>
-              <p className="text-gray-400 mb-6">
-                {t.home.workingOnNewChallenges}
+              <p className="text-blue-200 mb-6 group-hover:text-white transition-colors duration-300">
+                {t.home.themeSongDesc || "Posłuchaj krótkiego fragmentu muzyki wejściowej i odgadnij, do którego wrestlera należy. Czy rozpoznasz słynne theme songi?"}
               </p>
-              <div className="w-full h-12 bg-white/5 rounded-lg flex items-center justify-center">
-                <span className="text-gray-500">{t.home.comingSoon}</span>
-              </div>
+              <motion.a
+                href="/games/theme-song"
+                className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-green-600 to-cyan-600 text-white rounded-lg transform hover:scale-[1.02] transition-all duration-300 font-medium"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = '/games/theme-song';
+                }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {t.home.playNow}
+              </motion.a>
             </div>
           </div>
         </motion.div>

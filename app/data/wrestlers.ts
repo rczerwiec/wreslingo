@@ -85,7 +85,8 @@ export const wrestlers: Wrestler[] = [
         de: 'Er besiegte Leukämie zweimal - 2007 und 2018',
         es: 'Venció a la leucemia dos veces - en 2007 y 2018'
       }
-    ]
+    ],
+    image: '/images/wrestlers/roman-reigns.jpg'
   },
   {
     id: 'kenny-omega',
@@ -158,7 +159,8 @@ export const wrestlers: Wrestler[] = [
         de: 'Er erhielt 7 Sterne von Dave Meltzer für seinen Kampf mit Kazuchika Okada im Jahr 2018',
         es: 'Recibió 7 estrellas de Dave Meltzer por su combate con Kazuchika Okada en 2018'
       }
-    ]
+    ],
+    image: '/images/wrestlers/kenny-omega.jpg'
   },
   {
     id: 'the-miz',
@@ -243,7 +245,8 @@ export const wrestlers: Wrestler[] = [
         de: 'Er hat seine eigene Reality-Show mit seiner Frau"',
         es: 'Tiene su propio reality show con su esposa '
       }
-    ]
+    ],
+    image: '/images/wrestlers/the-miz.jpg'
   },
   {
     id: 'john-cena',
@@ -334,7 +337,8 @@ export const wrestlers: Wrestler[] = [
         de: 'Er nahm ein Hip-Hop-Album auf, das Platz 15 der Billboard 200-Charts erreichte',
         es: 'Grabó un álbum de hip-hop que alcanzó el puesto 15 en la lista Billboard 200'
       }
-    ]
+    ],
+    image: '/images/wrestlers/john-cena.jpg'
   },
   {
     id: 'kofi-kingston',
@@ -591,7 +595,8 @@ export const wrestlers: Wrestler[] = [
         de: 'Beendete The Undertakers legendäre 21:0-WrestleMania-Serie bei WrestleMania 30',
         es: 'Terminó la legendaria racha de 21-0 de The Undertaker en WrestleMania 30'
       }
-    ]
+    ],
+    image: '/images/wrestlers/brock-lesnar.jpg'
   },
   {
     id: 'rey-mysterio',
@@ -688,7 +693,8 @@ export const wrestlers: Wrestler[] = [
         de: 'Sein Sohn ist ebenfalls Wrestler in der WWE',
         es: 'Su hijo también es luchador en WWE'
       }
-    ]
+    ],
+    image: '/images/wrestlers/rey-mysterio.jpg'
   },
   {
     id: 'edge',
@@ -791,7 +797,8 @@ export const wrestlers: Wrestler[] = [
         de: 'Nach dem Ende seiner WWE-Karriere wechselte er 2023 zu AEW',
         es: 'Después de terminar su carrera en WWE, se mudó a AEW en 2023'
       }
-    ]
+    ],
+    image: '/images/wrestlers/edge.jpg'
   },
   {
     id: 'seth-rollins',
@@ -938,7 +945,7 @@ export const wrestlers: Wrestler[] = [
         yearLast: 2007
       }
     ],
-    finishers: ['Tombstone Piledriver', 'Hell’s Gate'],
+    finishers: ['Tombstone Piledriver', 'Hell\'s Gate'],
     signature_moves: ['Chokeslam', 'Old School'],
     height: '6\'10"',
     weight: '309 lbs',
@@ -974,7 +981,8 @@ export const wrestlers: Wrestler[] = [
         de: '2022 in die WWE Hall of Fame aufgenommen',
         es: 'Incluido en el WWE Hall of Fame en 2022'
       }
-    ]
+    ],
+    image: '/images/wrestlers/undertaker.jpg'
   },
   {
     id: 'stone-cold-steve-austin',
@@ -1049,7 +1057,7 @@ export const wrestlers: Wrestler[] = [
         es: 'Ganó el Royal Rumble tres veces – el máximo en la historia de WWE'
       },
       {
-        pl: 'Jego feuda z Vince’em McMahonem to jeden z najbardziej kultowych w historii WWE',
+        pl: 'Jego feud z Vince\'em McMahonem to jeden z najbardziej kultowych w historii WWE',
         en: 'His feud with Vince McMahon is one of the most iconic in WWE history',
         de: 'Seine Fehde mit Vince McMahon ist eine der bekanntesten in der WWE-Geschichte',
         es: 'Su rivalidad con Vince McMahon es una de las más icónicas en la historia de WWE'
@@ -1281,7 +1289,7 @@ export const wrestlers: Wrestler[] = [
       },
       {
         pl: 'Stracił walizkę Money in the Bank nawet jej nie wykorzystując',
-        en: 'Lost his Money in the Bank bag even though he didn’t use it',
+        en: 'Lost his Money in the Bank bag even though he didn\'t use it',
         de: 'Verlor seine Money in the Bank Tasche, obwohl er sie nicht benutzte',
         es: 'Perdió su bolsa Money in the Bank incluso sin usarla'
       },
@@ -1451,10 +1459,10 @@ export const wrestlers: Wrestler[] = [
         es: 'Es el único luchador que ganó campeonatos de WWE, WCW, ECW y World Heavyweight'
       },
       {
-        pl: 'Zagrał w kilku filmach i serialach, w tym w „The Waterboy” i show promowanym jego własnym imieniem',
-        en: 'Acted in several movies and shows, including “The Waterboy” and a show named after his own name',
-        de: 'Spielte in mehreren Filmen und Serien mit, darunter „The Waterboy“ und einem Show, das nach seinem eigenen Namen benannt ist',
-        es: 'Actuó en varias películas y series, incluyendo “The Waterboy” y un show llamado después de su propio nombre'
+        pl: 'Zagrał w kilku filmach i serialach, w tym w "The Waterboy" i show promowanym jego własnym imieniem',
+        en: 'Acted in several movies and shows, including "The Waterboy" and a show named after his own name',
+        de: 'Spielte in mehreren Filmen und Serien mit, darunter "The Waterboy" und einem Show, das nach seinem eigenen Namen benannt ist',
+        es: 'Actuó en varias películas y series, incluyendo "The Waterboy" y un show llamado después de su propio nombre'
       }
     ]
   },
@@ -1567,23 +1575,23 @@ export const wrestlers: Wrestler[] = [
       es: 'Mississauga, Ontario, Canadá'
     },
     characteristic: {
-      pl: 'Komiczny styl walki, charakterystyczna „kobra” jako finisher, wąsy i gesty sceniczne',
-      en: 'Comedic wrestling style, signature “cobra” finisher, mustache and theatrical gestures',
-      de: 'Komödiantischer Stil, typischer “Cobra”-Finisher, Schnurrbart und theatralische Gesten',
-      es: 'Estilo cómico de lucha, remate “cobra” característico, bigote y gestos teatrales'
+      pl: 'Komiczny styl walki, charakterystyczna "kobra" jako finisher, wąsy i gesty sceniczne',
+      en: 'Comedic wrestling style, signature "cobra" finisher, mustache and theatrical gestures',
+      de: 'Komödiantischer Stil, typischer "Cobra"-Finisher, Schnurrbart und theatralische Gesten',
+      es: 'Estilo cómico de lucha, remate "cobra" característico, bigote y gestos teatrales'
     },
     funFacts: [
       {
-        pl: 'Zadebiutował niespodziewanie w WWE jako „fan z publiczności”, który pokonał Umagę',
-        en: 'Debuted in WWE as a “fan from the audience” who defeated Umaga',
-        de: 'Debütierte in der WWE als „Fan aus dem Publikum“, der Umaga besiegte',
-        es: 'Debutó en WWE como un “fan del público” que venció a Umaga'
+        pl: 'Zadebiutował niespodziewanie w WWE jako "fan z publiczności", który pokonał Umagę',
+        en: 'Debuted in WWE as a "fan from the audience" who defeated Umaga',
+        de: 'Debütierte in der WWE als "Fan aus dem Publikum", der Umaga besiegte',
+        es: 'Debutó en WWE como un "fan del público" que venció a Umaga'
       },
       {
-        pl: 'Występował też jako jego rzekoma „siostra bliźniaczka”',
-        en: 'Also performed as his supposed “twin sister”',
-        de: 'Trat auch als seine angebliche „Zwillingsschwester“ auf',
-        es: 'También actuó como su supuesta “hermana gemela”'
+        pl: 'Występował też jako jego rzekoma "siostra bliźniaczka"',
+        en: 'Also performed as his supposed "twin sister"',
+        de: 'Trat auch als seine angebliche "Zwillingsschwester" auf',
+        es: 'También actuó como su supuesta "hermana gemela"'
       },
       {
         pl: 'Występował w polskiej federacji PTW.',
@@ -1690,7 +1698,7 @@ export const wrestlers: Wrestler[] = [
         yearLast: 2000
       }
     ],
-    finishers: ['Rock Bottom', 'People’s Elbow'],
+    finishers: ['Rock Bottom', 'People\'s Elbow'],
     signature_moves: ['Samoan Drop', 'Diving Clothesline', 'Sharpshooter'],
     height: '6\'5"',
     weight: '260 lbs',
@@ -1855,10 +1863,10 @@ export const wrestlers: Wrestler[] = [
         es: 'Fue el ganador más joven de Money in the Bank en la historia de WWE'
       },
       {
-        pl: 'Był „wybrańcem” Vince’a McMahona w fabule prowadzącej do WrestleManii 38',
-        en: 'He was Vince McMahon’s “chosen one” in the storyline leading to WrestleMania 38',
-        de: 'Er war Vince McMahons „Auserwählter“ in der Storyline vor WrestleMania 38',
-        es: 'Fue el “elegido” de Vince McMahon en la historia que llevó a WrestleMania 38'
+        pl: 'Był "wybrańcem" Vince\'a McMahona w fabule prowadzącej do WrestleManii 38',
+        en: 'He was Vince McMahon\'s "chosen one" in the storyline leading to WrestleMania 38',
+        de: 'Er war Vince McMahons "Auserwählter" in der Storyline vor WrestleMania 38',
+        es: 'Fue el "elegido" de Vince McMahon en la historia que llevó a WrestleMania 38'
       },
       {
         pl: 'Zaczął karierę jako kulturysta i wygrał kilka lokalnych zawodów',
@@ -1867,7 +1875,81 @@ export const wrestlers: Wrestler[] = [
         es: 'Comenzó su carrera como culturista y ganó varias competiciones locales'
       }
     ]
+  },
+  {
+    id: 'carmelo-hayes',
+    name: 'Carmelo Hayes',
+    alternateNames: ['Melo'],
+    currentEmployer: 'WWE',
+    currentRoster: 'SmackDown',
+    yearsActive: {
+      from: 2014
+    },
+    championships: [
+      {
+        name: 'NXT Championship',
+        times: 1,
+        yearFirst: 2023,
+        yearLast: 2023
+      },
+      {
+        name: 'NXT North American Championship',
+        times: 2,
+        yearFirst: 2021,
+        yearLast: 2022
+      },
+      {
+        name: 'NXT Cruiserweight Championship',
+        times: 1,
+        yearFirst: 2021,
+        yearLast: 2021
+      },
+      {
+        name: 'WWE Andre the Giant Memorial Trophy',
+        times: 1,
+        yearFirst: 2021,
+        yearLast: 2021
+      }
+    ],
+    finishers: ['Nothing But Net'],
+    signature_moves: ['Springboard Clothesline', 'Fadeaway Leg Drop', 'Codebreaker'],
+    height: '5\'10"',
+    weight: '210 lbs',
+    birthDate: '1994-08-01',
+    birthplace: {
+      pl: 'Framingham, Massachusetts',
+      en: 'Framingham, Massachusetts',
+      de: 'Framingham, Massachusetts',
+      es: 'Framingham, Massachusetts'
+    },
+    characteristic: {
+      pl: 'Styl uliczny, atletyczna sylwetka, ogromna pewność siebie',
+      en: 'Street style, athletic physique, high confidence',
+      de: 'Street-Style, athletische Figur, großes Selbstvertrauen',
+      es: 'Estilo callejero, físico atlético, gran confianza en sí mismo'
+    },
+    funFacts: [
+      {
+        pl: 'Ma powiedzenie "... nie chybia", podkreślając swoją skuteczność w ringu',
+        en: 'He says "... don\'t miss," highlighting his in-ring accuracy',
+        de: 'Er sagt "... verfehlt nicht", um seine Treffgenauigkeit im Ring zu betonen',
+        es: 'El dice "... no falla", destacando su precisión en el ring'
+      },
+      {
+        pl: 'Był uczniem WWE Performance Center i szybko wspiął się w hierarchii NXT',
+        en: 'He was a WWE Performance Center trainee and quickly rose through the NXT ranks',
+        de: 'Er war ein WWE Performance Center-Trainee und stieg schnell in den NXT-Rängen auf',
+        es: 'Fue aprendiz del WWE Performance Center y ascendió rápidamente en NXT'
+      },
+      {
+        pl: 'Zasłynął z walki z Trickiem Williamsem, jego dawnym partnerem',
+        en: 'He became known for his feud with Trick Williams, his former partner',
+        de: 'Er wurde bekannt durch seine Fehde mit Trick Williams, seinem ehemaligen Partner',
+        es: 'Se hizo conocido por su rivalidad con Trick Williams, su antiguo compañero'
+      }
+    ]
   }
+  
   
   
   

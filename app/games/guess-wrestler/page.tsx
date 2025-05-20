@@ -1,7 +1,7 @@
 'use client'
 
-import React, { JSX } from 'react'
-import { useState, useEffect } from 'react'
+import React, { JSX, useRef, useEffect } from 'react'
+import { useState } from 'react'
 import Image from 'next/image'
 import { Wrestler } from '@/app/types/wrestler'
 import { getRandomWrestler, checkWrestlerGuess, calculateAge } from '@/app/data/wrestlers'
@@ -51,6 +51,8 @@ export default function GuessWrestler() {
     guess: string;
     attempt: number;
   }>>([])
+  const [isProcessingHint, setIsProcessingHint] = useState(false)
+  const resultPanelRef = useRef<HTMLDivElement>(null)
 
   // Konfiguracja wskazówek z tłumaczeniami
   const HINTS_CONFIG: Record<HintType, HintConfig> = {
@@ -146,6 +148,16 @@ export default function GuessWrestler() {
       console.error('Error initializing game:', e)
     }
   }, [])
+
+  // Dodajemy efekt do przewijania do panelu wyników
+  useEffect(() => {
+    if (gameStatus !== 'playing' && resultPanelRef.current) {
+      // Dodajemy lekkie opóźnienie, aby panel miał czas się wyrenderować
+      setTimeout(() => {
+        resultPanelRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      }, 300)
+    }
+  }, [gameStatus])
 
   const convertHeight = (height: string, to: UnitSystem): string => {
     if (!height) return 'Brak danych'
@@ -277,21 +289,28 @@ export default function GuessWrestler() {
   }
 
   const revealHint = (hintType: HintType) => {
-    if (!wrestler || revealedHints.includes(hintType)) return
+    if (!wrestler || revealedHints.includes(hintType) || isProcessingHint) return
     
+    setIsProcessingHint(true)
     setIsHintRevealing(hintType)
     setTimeout(() => {
       setRevealedHints(prev => [...prev, hintType])
       // Odejmujemy punkty tylko jeśli to nie jest pierwsza podpowiedź
       if (revealedHints.length > 0) {
         const pointsLost = HINTS_CONFIG[hintType].points
-        setScore(prev => Math.max(0, prev - pointsLost))
+        const newScore = Math.max(0, score - pointsLost)
+        setScore(newScore)
         
-        if (score <= pointsLost) {
-          setGameStatus('lost')
-        }
+        // Gdy punkty spadają do zera, nie kończymy gry od razu
+        // Użytkownik powinien mieć możliwość oddania jeszcze jednego strzału
+        // Obsługujemy to w handleGuess
       }
       setIsHintRevealing(null)
+      // Dodajemy małe opóźnienie przed zwolnieniem blokady, 
+      // żeby uniknąć przypadkowego podwójnego kliknięcia
+      setTimeout(() => {
+        setIsProcessingHint(false)
+      }, 300)
     }, 500)
   }
 
@@ -311,6 +330,16 @@ export default function GuessWrestler() {
         attempt: currentAttempt
       }])
       
+      // Sprawdzamy czy punkty są równe zero - jeśli tak, kończymy grę
+      if (score === 0) {
+        setGameStatus('lost')
+        // Po przegranej odkrywamy wszystkie podpowiedzi
+        const allHints = Object.keys(HINTS_CONFIG) as HintType[]
+        setRevealedHints(allHints)
+        setGuess('')
+        return
+      }
+      
       // Losowe odkrycie następnej wskazówki po błędnej odpowiedzi
       // Ale tylko takiej, która nie jest ciekawostką
       const nextHint = getRandomUnrevealedHint()
@@ -324,6 +353,9 @@ export default function GuessWrestler() {
         
         if (!funFactsAvailable) {
           setGameStatus('lost')
+          // Po przegranej odkrywamy wszystkie podpowiedzi
+          const allHints = Object.keys(HINTS_CONFIG) as HintType[]
+          setRevealedHints(allHints)
         }
       }
     }
@@ -407,7 +439,7 @@ export default function GuessWrestler() {
 
   // Dodajemy funkcję handle do kupowania ciekawostek
   const handleBuyHint = (hintType: HintType) => {
-    if (!wrestler || revealedHints.includes(hintType)) return
+    if (!wrestler || revealedHints.includes(hintType) || isProcessingHint) return
     
     if (gameStatus === 'playing') {
       // Sprawdzamy, czy gracz ma wystarczającą liczbę punktów
@@ -673,6 +705,7 @@ export default function GuessWrestler() {
             <AnimatePresence>
               {gameStatus !== 'playing' && (
                 <motion.div 
+                  ref={resultPanelRef}
                   className={`p-8 rounded-xl backdrop-blur-sm ${
                     gameStatus === 'won' 
                       ? 'bg-gradient-to-br from-green-500/20 via-emerald-500/20 to-teal-500/20 border border-green-500/30' 

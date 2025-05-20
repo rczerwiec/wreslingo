@@ -40,83 +40,83 @@ export const Navbar: React.FC = () => {
   
   return (
     <div className="relative">
-      <motion.nav 
+    <motion.nav 
         className="sticky top-0 z-40 bg-black/30 backdrop-blur-sm text-white h-20 flex items-center"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           {/* Desktop Menu */}
           <div className="hidden md:flex md:justify-between md:items-center">
-            {/* Menu po lewej */}
-            <motion.div 
+          {/* Menu po lewej */}
+          <motion.div 
               className="flex space-x-2 justify-start"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
+            <motion.button 
+              onClick={() => navigateTo('/games')}
+              className="px-4 py-2 rounded-lg border border-blue-600 hover:bg-blue-600 transition-all duration-200 text-blue-200 hover:text-white flex items-center gap-2"
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
             >
-              <motion.button 
-                onClick={() => navigateTo('/games')}
-                className="px-4 py-2 rounded-lg border border-blue-600 hover:bg-blue-600 transition-all duration-200 text-blue-200 hover:text-white flex items-center gap-2"
-                variants={buttonVariants}
-                whileHover="hover"
-                whileTap="tap"
-              >
-                <FaGamepad />
-                {t.nav.games}
-              </motion.button>
-              <motion.button 
-                onClick={() => navigateTo('/ranking')}
-                className="px-4 py-2 rounded-lg border border-blue-600 hover:bg-blue-600 transition-all duration-200 text-blue-200 hover:text-white flex items-center gap-2"
-                variants={buttonVariants}
-                whileHover="hover"
-                whileTap="tap"
-              >
-                <FaTrophy />
-                {t.nav.ranking}
-              </motion.button>
-            </motion.div>
-            
+              <FaGamepad />
+              {t.nav.games}
+            </motion.button>
+            <motion.button 
+              onClick={() => navigateTo('/ranking')}
+              className="px-4 py-2 rounded-lg border border-blue-600 hover:bg-blue-600 transition-all duration-200 text-blue-200 hover:text-white flex items-center gap-2"
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
+            >
+              <FaTrophy />
+              {t.nav.ranking}
+            </motion.button>
+          </motion.div>
+          
             {/* Pusta przestrzeń na środku (dla logo) */}
             <div className="w-28"></div>
-            
-            {/* Menu po prawej */}
-            <motion.div 
+          
+          {/* Menu po prawej */}
+          <motion.div 
               className="flex items-center space-x-2 justify-end"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
+            <motion.button 
+              onClick={() => navigateTo('/login')}
+              className="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 transition-all duration-200 text-white flex items-center gap-2"
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
             >
-              <motion.button 
-                onClick={() => navigateTo('/login')}
-                className="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 transition-all duration-200 text-white flex items-center gap-2"
-                variants={buttonVariants}
-                whileHover="hover"
-                whileTap="tap"
-              >
-                <FaSignInAlt />
-                {t.nav.login}
-              </motion.button>
-              <motion.button 
-                onClick={() => navigateTo('/register')}
-                className="px-4 py-2 rounded-lg border border-blue-600 hover:bg-blue-600 transition-all duration-200 text-blue-200 hover:text-white flex items-center gap-2"
-                variants={buttonVariants}
-                whileHover="hover"
-                whileTap="tap"
-              >
-                <FaUserPlus />
-                {t.nav.register}
-              </motion.button>
-              <motion.div 
-                className="w-px h-6 bg-white/10"
-                initial={{ height: 0 }}
-                animate={{ height: 24 }}
-                transition={{ delay: 0.5, duration: 0.4 }}
-              /> {/* separator */}
-              <LanguageSelector />
-            </motion.div>
-          </div>
+              <FaSignInAlt />
+              {t.nav.login}
+            </motion.button>
+            <motion.button 
+              onClick={() => navigateTo('/register')}
+              className="px-4 py-2 rounded-lg border border-blue-600 hover:bg-blue-600 transition-all duration-200 text-blue-200 hover:text-white flex items-center gap-2"
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
+            >
+              <FaUserPlus />
+              {t.nav.register}
+            </motion.button>
+            <motion.div 
+              className="w-px h-6 bg-white/10"
+              initial={{ height: 0 }}
+              animate={{ height: 24 }}
+              transition={{ delay: 0.5, duration: 0.4 }}
+            /> {/* separator */}
+            <LanguageSelector />
+          </motion.div>
+        </div>
 
           {/* Mobile Menu */}
           <div className="md:hidden flex items-center justify-between">
